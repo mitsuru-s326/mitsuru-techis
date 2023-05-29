@@ -8,7 +8,7 @@ class ExampleTest extends TestCase
 {
     /**
      * A basic test example.
-     *
+     *aaaaaaa
      * @return void
      */
     public function test_example()
