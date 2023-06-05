@@ -12,6 +12,7 @@ class Item extends Model
     protected $fillable = [
         'title',
         'author',
+        'publisher',
         'genre',
         'introduction',
         'image',
