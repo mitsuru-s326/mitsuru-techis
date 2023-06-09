@@ -52,5 +52,6 @@ use Illuminate\Support\Facades\Route;
 
 
 
-
+// ホーム画面　//
+Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
 
