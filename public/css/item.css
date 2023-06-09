@@ -1,0 +1,113 @@
+/* 共通 */
+
+body{
+height:100vh;
+background-color: rgb(76, 202, 76);
+}
+
+header{
+    position:fixed;
+    left:0px;
+    right:0px;
+    background-color: rgb(76, 202, 76);
+    padding-top: 10px;
+}
+
+main{
+    margin-top:100px;
+}  
+
+/* 商品一覧画面 */
+
+.index-books{
+    display:flex; 
+    flex-wrap:wrap;
+}
+
+.index-book-information{
+    width:45%;
+    /* height:280px; */
+    align-items: center;
+    display:flex;
+    background-color:rgb(230, 162, 73);
+    margin:auto;
+    margin-bottom:20px;
+    margin-top:20px;
+}
+
+.index-book-image{
+    width:250px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.index-book-image img{
+    width:200px;
+    height:250px;
+    margin:auto;
+    padding-left:10px;
+}
+
+.index-book-details{
+    width:100%;
+    list-style:none;
+    text-align:left;
+    margin-top:20px;
+    margin-bottom:10px;
+    margin-left:20px;
+}
+
+.index-book-details li button{
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.index-book-details button{
+    width: 150px;
+    text-decoration:none;
+    border-radius: 10px;
+}
+
+.index-book-details button a{
+    text-decoration:none;
+}
+
+/* 登録画面 */
+
+.registration-book-details{
+    width:90%;
+    margin:auto;
+    margin-top:20px;
+}
+
+.registration-book-details p{
+    font-size: large;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+.registration-book-details button{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+/* 編集画面 */
+
+.edit-book-details{
+    width:90%;
+    margin:auto;
+    margin-top:20px;
+}
+
+.edit-book-details p{
+    font-size: large;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+.edit-book-details button{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+}

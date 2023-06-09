@@ -4,28 +4,43 @@
     <title>管理者用 商品一覧画面</title>
 </head>
 
-<body class="index text-center">
-
+<body class="text-center">
+    
+  <header>
     <h1>商品一覧画面（管理者用）</h1>
-    <br>
-    <button class="w-200 btn btn-lg"><a href="/registration">商品新規登録画面へ</a></button>
+    <button class="w-200 btn btn-lg"><a href="/item/registration">商品新規登録画面へ</a></button>
     <button class="w-200 btn btn-lg"><a href="/return">ホーム画面戻る</a></button>
+  </header>
 
-    <side>
-    <br>
-    <br>
-    <main>   
-      
-        <div>画像イメージ</div>
-        <li>題名</li>
-        <li>著者名</li>
-        <li>ジャンル</li>
-        <li>本の紹介</li>
-        <li>価格</li>
-        <li>在庫</li>
-        <li><button><a href="/edit">商品編集画面へ</a></button></li>
-        <li><button><a href="/edit/delete">商品削除</a></button></li>
-       
-    </main>
+  <br>
 
+  <main>
+    <div class="index-books">   
+      @foreach($items as $item)
+        <div class ="index-book-information">
+        
+          <div class="index-book-image">
+            <img src="data:image/png;base64,{{$item->image}}" alt="image">
+          </div>
+          
+          <div class="index-book-details">
+            <li><b>題名：{{$item->title}}</b></li>
+            <li>著者：{{$item->author}}</li>
+            <li>出版社：{{$item->publisher}}</li>
+            <li>ジャンル：{{$item->genre}}</li>
+            <li>本の概要：{{$item->introduction}}</li>
+            <li>現在の価格：{{number_format($item->price)}}円</li>
+            <li>現在の在庫数：{{number_format($item->inventory)}}冊</li>
+            <li><button type="sumbit"><a href="/item/edit/{{$item->id}}">商品編集画面へ</a></button></li>
+            <li><button type="sumbit"><a href="/item/edit/delete/{{$item->id}}">商品削除</a></button></li>
+          </div>
+
+        </div>
+      @endforeach 
+    </div>
+  </main>
+
+  <br>
+
+  
 </body>

@@ -12,6 +12,7 @@ class Item extends Model
     protected $fillable = [
         'title',
         'author',
+        'publisher',
         'genre',
         'introduction',
         'image',
@@ -19,9 +20,4 @@ class Item extends Model
         'inventory',
     ];
 
-    // userの情報を取得する
-    // public function user()
-    // {
-    //     return $this->belongsTo(User::class);
-    // }
 }

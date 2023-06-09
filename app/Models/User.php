@@ -42,10 +42,4 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-
-     // ユーザーが保持する全商品
-    //  public function items()
-    //  {
-    //      return $this->hasMany(Item::class);
-    //  }
 }
