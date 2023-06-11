@@ -11,7 +11,7 @@
     <td>{{$item->publisher}}</td>
     <td>{{$item->genre}}</td>
     <td>{{$item->introduction}}</td>
-    <td>{{$item->image}}</td>
+    <td><img src="{{$item->image}}"></td>
     <td>{{$item->price}}</td>
     <td>{{$item->inventory}}</td>
 </tr>

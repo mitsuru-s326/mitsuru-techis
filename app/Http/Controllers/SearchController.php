@@ -10,7 +10,9 @@ class SearchController extends Controller
 {
     //商品一覧・検索画面を表示する
     public function index() {
-        return view('search.index');
+        //$items = Item::get();
+        $items = Item::where('status', 'active')->get();
+        return view('search.index')->with('items', $items);
     }
 
     //登録商品の詳細画面を表示する
@@ -20,6 +22,6 @@ class SearchController extends Controller
         //idをDBから取得する
         $item = Item::findOrfail($id);
         //詳細画面を表示させる
-        return view('search.detail')->with('item', $item);
+        return view('search.detail', ['item'=>$item]);
     }
 }
