@@ -21,15 +21,4 @@ class Item extends Model
         'inventory',
     ];
 
-    // userの情報を取得する
-    // public function user()
-    // {
-    //     return $this->belongsTo(User::class);
-    // }
-
-    // 論理削除
-    // use SoftDeletes;
-    // const DELETE_AT = 'status';
-    // protected $dates = ['status'];
-
 }
