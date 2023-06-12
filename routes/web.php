@@ -79,7 +79,10 @@ use Illuminate\Support\Facades\Route;
     Route::post('item/edit/update/{id}', [App\Http\Controllers\ItemController::class, 'UpdateItem'])->name('update');
 
 // ホーム画面//
-    Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
+    Route::get('/home',[App\Http\Controllers\HomeController::class, 'home']);
+    Route::get('/items',[App\Http\Controllers\HomeController::class, 'item']);
+    Route::get('/items',[App\Http\Controllers\HomeController::class, 'search']);
+    Route::get('/items',[App\Http\Controllers\HomeController::class, 'account']);
 
 
 
@@ -88,6 +91,5 @@ use Illuminate\Support\Facades\Route;
 
 
 
-// ホーム画面　//
-Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
+
 

@@ -10,16 +10,28 @@
 <body>
     <div class="main-wrapper">
         <div class="btn-wrapper">
-            <button class="button" onclick="">商品一覧</button>
-            <button class="button2" onclick="">情報管理</button>
+            <ul>
+                <li class="list-1">
+                    <a class="button" href="/search/index.blade.php">商品一覧</a>
+                 </li>
+            {{-- @can() --}}
+                <li class="list-2">
+                    <a class="button2" href="/items">商品管理</a>
+                </li>
+                <li class="list-3">
+                     <a class="button3" href="/account/list.index.php">利用者一覧</a>
+                </li>
+            {{-- @endcan --}}
         </div>
         <div class="content-wrapper">
             <h1>ホーム画面へようこそ</h1>
             <h2>この商品管理システムは本の在庫状況を管理するためのシステムです</h2>
         </div>
         <div class="user-wrapper">
-            <button class="button3">ログアウト</button>
-            <h3>ログイン中 〇〇さん</h3>
+            <div class="user-btn">
+                <a class="button4" href="account/index.php">ログアウト</a>
+            </div>
+            <h3>ログイン中 {{-- <php> $user = Auth::user(); ?>{{ $user->nick_name }} --}}</h3>
         </div>
     </div>
 </body>
