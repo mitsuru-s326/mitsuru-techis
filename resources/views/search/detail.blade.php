@@ -2,6 +2,7 @@
 
 <h1>詳細画面</h1>
 
+<div class="detail-list">
 <table>
 <tbody>
 <tr>
@@ -17,3 +18,4 @@
 </tr>
 </tbody>
 </table>
+</div>

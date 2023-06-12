@@ -1,6 +1,25 @@
-
-h1 {
-
-
+.container{
+    max-width: 850px;
 }
 
+h1{
+    margin: 30px 0px;
+}
+
+.all-list {
+    display: flex;
+}
+
+.all-list .image {
+    /* width: 25%; */
+    height: 220px;
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    /* height: auto; */
+}
+
+.all-list img {
+}
