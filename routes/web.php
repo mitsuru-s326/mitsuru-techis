@@ -45,12 +45,6 @@ use Illuminate\Support\Facades\Route;
         Route::get('/list', [App\Http\Controllers\AccountController::class, 'list']);
         });
 
-//登録商品一覧の表示
-Route::get('/search', [\App\Http\Controllers\SearchController::class, 'index']);
-//登録商品の詳細画面
-Route::get('/search/detail/{id}', [\App\Http\Controllers\SearchController::class, 'detail']);
-
-
 // 商品一覧画面を表示する場合はここを通す
     Route::get('item/', [App\Http\Controllers\ItemController::class, 'GetIndex'])->name('index');
 
@@ -72,13 +66,13 @@ Route::get('/search/detail/{id}', [\App\Http\Controllers\SearchController::class
     Route::get('item/edit/delete/{id}', [App\Http\Controllers\ItemController::class, 'DeleteItem'])->name('deletion');
 
 
-// 商品登録画面
+// // 商品登録画面
 
     // 「商品新規登録画面へ」ボタンがクリックされたときの遷移を取得
     Route::post('item/registration', [App\Http\Controllers\ItemController::class, 'RegisterItem'])->name('registration');
 
 
-// 商品編集画面
+// // 商品編集画面
 
     // 「更新」ボタンがクリックされたときの遷移を取得
     Route::post('item/edit/update/{id}', [App\Http\Controllers\ItemController::class, 'UpdateItem'])->name('update');
@@ -87,8 +81,13 @@ Route::get('/search/detail/{id}', [\App\Http\Controllers\SearchController::class
     Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
 
 
+// 商品閲覧・検索・詳細
 
+//登録商品一覧の表示
+Route::get('/search', [\App\Http\Controllers\SearchController::class, 'index']);
 
+//登録商品の詳細画面
+Route::get('/search/detail/{id}', [\App\Http\Controllers\SearchController::class, 'detail']);
 
 
 
