@@ -1,8 +1,11 @@
-.container{
+.container {
     max-width: 850px;
 }
+hr {
+    margin-bottom: 0px;
+}
 
-h1{
+h1 {
     margin: 30px 0px;
 }
 
@@ -10,15 +13,24 @@ h1{
     display: flex;
 }
 
-.all-list .image {
-    height: 250px;
-    padding: 0.25rem;
-    background-color: #fff;
-    /* border-radius: 0.25rem; */
-    max-width: 100%;
-    margin: auto 0;
-    display: table-cell;
-    vertical-align: middle;
+.all-list li {
+    list-style: none;
 }
 
-.all-list img {width: 100%;border-radius: 0.25rem;}
+.all-list td {
+    height: 250px;
+    padding: 19px 20px;
+}
+
+.all-list td.image {
+    width: 30%;
+    outline: solid 0.5px lightgray;
+    outline-offset: -20px;
+}
+
+.all-list img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 0.25rem;
+}

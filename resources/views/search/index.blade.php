@@ -22,7 +22,7 @@
     <div>
     <?php $url = $_SERVER['REQUEST_URI']; ?>
     <?php if (strstr($url, 'keyword')) : ?>
-        検索結果<a href="/search">全件表示に戻る</a>
+        検索結果表示　　<a href="/search">全件表示に戻る</a>
     <?php else : ?>
         全件表示
     <?php endif; ?>
@@ -35,13 +35,15 @@
                 @foreach ($items as $item)
                 <tr>
                     <td class="image"><img src="{{$item->image}}"></td>
-                    <td><a href="/search/detail/{{ $item->id }}">{{$item->title}}</a></td>
-                    <td>著書：{{$item->author}}</td>
-                    <td>出版社：{{$item->publisher}}</td>
-                    <td>ジャンル：{{$item->genre}}</td>
-                    <td>{{$item->introduction}}</td>
-                    <td>{{$item->price}}</td>
-                    <td>{{$item->inventory}}</td>
+                    <td>
+                        <li><a href="/search/detail/{{ $item->id }}">{{$item->title}}</a></li>
+                        <li>
+                        著書：{{$item->author}}
+                        </li>
+                        <li>
+                        出版社：{{$item->publisher}}
+                        </li>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
