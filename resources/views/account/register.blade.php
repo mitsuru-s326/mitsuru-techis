@@ -49,11 +49,11 @@
                         <p></p>
                     <div class=lavelColor><label>パスワード</label></div>
                     <div class=sukima></div>    
-                        <input type="text" name="password" class="form-control" class="justify-content-center" placeholder="パスワード">
+                        <input type="password" name="password" class="form-control" class="justify-content-center" placeholder="パスワード">
                         <p style= color:green>{{ $errors->first("password") }}</p>
                     <div class=lavelColor><label>パスワード確認用</label></div>
                     <div class=sukima></div>
-                        <input type="text" name="password_confirmation" class="form-control" class="justify-content-center" placeholder="パスワード確認用">
+                        <input type="password" name="password_confirmation" class="form-control" class="justify-content-center" placeholder="パスワード確認用">
                         <p></p>
         </div>
 
