@@ -7,7 +7,6 @@
 <body class="container">
 <h2><i class="far fa-lightbulb"></i><span>アカウント編集画面</span></h2>
 
-
 <div class="bg_test">
 
 
@@ -49,13 +48,13 @@
                 
              </div>
 
-        <!-- タスク変更ボタン -->
+        <!-- アカウント変更ボタン -->
         <div class="form-group">
             <button type="submit" class="btn btn-success">アカウント情報変更</button>
         </div>       
     </form>
 
-        <!-- <タスク削除ボタン>     -->
+        <!-- <アカウント削除ボタン>     -->
 <form action="{{url('AccountDestroy')}}" method="POST">
         {{ csrf_field() }}
 
@@ -65,6 +64,9 @@
 </div>
 
 </form>
+
+
+
 </body>
 
 

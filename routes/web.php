@@ -40,10 +40,18 @@ use Illuminate\Support\Facades\Route;
 
     //管理者（is_adminが"１"の登録）のログイン情報があるかどうかをチェックするミドルウェア
         Route::middleware(['login_admin'])->group(function () {
-        //アカウント一覧画面
-        //アカウント一覧画面を取得
+//アカウント一覧画面
+    //アカウント一覧画面を取得
         Route::get('/list', [App\Http\Controllers\AccountController::class, 'list']);
         });
+//ログアウト機能
+    Route::post('/logout',[App\Http\Controllers\AccountController::class, 'logoutAuth'] );
+
+
+//ホーム画面にアカウントのニックネームを取得
+Route::get('/nickname', [App\Http\Controllers\AccountController::class, 'nickname']);
+
+
 
 //登録商品一覧の表示
 Route::get('/search', [\App\Http\Controllers\SearchController::class, 'index']);
@@ -85,12 +93,6 @@ Route::get('/search/detail/{id}', [\App\Http\Controllers\SearchController::class
 
 // ホーム画面//
     Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
-
-
-
-
-
-
 
 
 // ホーム画面　//
