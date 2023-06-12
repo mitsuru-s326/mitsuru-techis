@@ -53,12 +53,6 @@ Route::get('/nickname', [App\Http\Controllers\AccountController::class, 'nicknam
 
 
 
-//登録商品一覧の表示
-Route::get('/search', [\App\Http\Controllers\SearchController::class, 'index']);
-//登録商品の詳細画面
-Route::get('/search/detail/{id}', [\App\Http\Controllers\SearchController::class, 'detail']);
-
-
 // 商品一覧画面を表示する場合はここを通す
     Route::get('item/', [App\Http\Controllers\ItemController::class, 'GetIndex'])->name('index');
 
@@ -71,7 +65,7 @@ Route::get('/search/detail/{id}', [\App\Http\Controllers\SearchController::class
     });
 
     // 「ホーム画面に戻る」ボタンがクリックされたときの遷移を取得
-
+    Route::get('item/home', [App\Http\Controllers\ItemController::class, 'ReturnHome'])->name('return');;
 
     // 「商品の編集画面へ」ボタンがクリックされたときの遷移を取得
     Route::get('item/edit/{id}', [App\Http\Controllers\ItemController::class, 'GetUpdateItem'])->name('item');
@@ -80,19 +74,20 @@ Route::get('/search/detail/{id}', [\App\Http\Controllers\SearchController::class
     Route::get('item/edit/delete/{id}', [App\Http\Controllers\ItemController::class, 'DeleteItem'])->name('deletion');
 
 
-// 商品登録画面
+// // 商品登録画面
 
     // 「商品新規登録画面へ」ボタンがクリックされたときの遷移を取得
     Route::post('item/registration', [App\Http\Controllers\ItemController::class, 'RegisterItem'])->name('registration');
 
 
-// 商品編集画面
+// // 商品編集画面
 
     // 「更新」ボタンがクリックされたときの遷移を取得
     Route::post('item/edit/update/{id}', [App\Http\Controllers\ItemController::class, 'UpdateItem'])->name('update');
 
 // ホーム画面//
     Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
+
 
 
 // ホーム画面　//

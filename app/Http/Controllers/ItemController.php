@@ -12,23 +12,32 @@ class ItemController extends Controller
     public function GetIndex(Request $request)
     {
         // 商品一覧を取得する関数
-        $items = Item::where("status", "active")->orderBy('created_at', 'asc')->get();
+        $items = Item::where("status", "active")->latest()->get();
 
         return view('items.index', ["items" => $items]);
     }
+
+    public function ReturnHome(Request $request)
+    {
+        // ユーザーのニックネームを取得する関数
+        // $nickname = User::where("status", "active")->orderBy('created_at', 'asc')->get();
+
+        return view('home.index');
+    }
   
+
     public function RegisterItem(Request $request)
     {
         //  新しい本の情報を登録する関数
 
-         $this->validate($request, [
-            'title' => 'required|max:100',
-            'author' => 'required|max:100',
-            'publisher' => 'required|max:10',
-            'genre' => 'required|max:100',
-            'introduction' =>'required|max:1000',
+            $this->validate($request, [
+            'title' => 'required|max:20',
+            'author' => 'required|max:20',
+            'publisher' => 'required|max:20',
+            'genre' => 'required|max:20',
+            'introduction' =>'required|max:200',
             'image' =>'required|max:1000|mimes:jpg,jpeg,png,gif',
-            'price' => 'required|integer|min:0',
+            'price' => 'required|integer|min:1',
             'inventory' => 'required|integer|min:0',
             ]);
 
@@ -54,16 +63,18 @@ class ItemController extends Controller
         // dd($request->image ?? true);
 
         $this->validate($request, [
-            'title' => 'required|max:100',
-            'author' => 'required|max:100',
-            'publisher' => 'required|max:10',
-            'genre' => 'required|max:100',
-            'introduction' =>'required|max:1000',
+            'title' => 'required|max:20',
+            'author' => 'required|max:20',
+            'publisher' => 'required|max:20',
+            'genre' => 'required|max:20',
+            'introduction' =>'required|max:200',
             'image' => 'mimes:jpg,jpeg,png,gif',
-            'price' => 'required|integer|min:0',
+            'price' => 'required|integer|min:1',
             'inventory' => 'required|integer|min:0',
             ]);
        
+
+
         $item = Item::find($id);
 
         $item->title = $request->title;
