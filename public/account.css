@@ -1,0 +1,78 @@
+.titleColor {
+    text-align:center;
+    color:aliceblue; 
+    background-color:black;
+    border-bottom: solid 7px yellowgreen;
+
+}
+
+/* タイトルのCSS */
+h2 {
+    text-align:center;
+    padding: 1rem 3rem;
+    color: #fff;
+    border-radius: 100vh;
+    background-image: -webkit-gradient(linear, right top, left top, from(#9be15d), to(#00e3ae));
+    background-image: -webkit-linear-gradient(right, #9be15d 0%, #00e3ae 100%);
+    background-image: linear-gradient(to left, #9be15d 0%, #00e3ae 100%);
+  }
+  
+
+
+.lavelColor{
+    text-align:center;
+    font-size: large;
+    color:green;
+    border: solid 3px green;/*線色*/
+    padding: 0.1em;/*文字周りの余白*/
+    border-radius: 0.5em;/*角丸*/
+    width: auto;
+}
+
+.text1{
+    text-align: left;
+    width: 10em;
+}
+
+.sukima{
+    margin: 0.1em;
+}
+
+.bg_test-text {
+    border:  solid 3px;                             /* 枠線指定 */
+    display:  inherit;                         /* インラインブロックにする */
+    padding: 10px 20px;                             /* 余白指定 */
+    background-color: rgba(222, 235, 223, 0.877);     /* 背景色指定 */
+}
+
+.bg_test {
+    height: auto;
+    text-align:  center;    /* 文字中央寄せ */
+    padding:  10%;        /* 余白指定 */
+    /* margin: 2%; */
+    border: solid 0px;      /* 枠線指定 */
+    background-color:rgb(255, 255, 255);/*背景色指定*/
+    background-image: url(toshokan2.jpg);    /* 背景画像指定 */
+    /* background-position: 50%  50%; */
+    background-repeat: repeat; /* 背景画像の繰り返しを解除 */
+    background-size: contain;
+    border-radius: 10%;/*角丸*/
+}
+
+.list {
+    text-align: center;
+    color: rgb(39, 77, 6);
+}
+
+.user_register{
+    
+    text-align: center;
+    font-size: large;
+    background-color: green;
+    
+
+}
+
+.a{
+   color:aliceblue;
+}
