@@ -11,15 +11,14 @@ h1{
 }
 
 .all-list .image {
-    /* width: 25%; */
-    height: 220px;
+    height: 250px;
     padding: 0.25rem;
     background-color: #fff;
-    border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
+    /* border-radius: 0.25rem; */
     max-width: 100%;
-    /* height: auto; */
+    margin: auto 0;
+    display: table-cell;
+    vertical-align: middle;
 }
 
-.all-list img {
-}
+.all-list img {width: 100%;border-radius: 0.25rem;}
