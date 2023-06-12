@@ -26,14 +26,15 @@
     <?php else : ?>
         全件表示
     <?php endif; ?>
+    <hr>
     </div>
 
     <div class="all-list">
-    @foreach ($items as $item)
-        <img img-thumbnail src="{{$item->image}}"></td>
         <table class="table">
             <tbody>
+                @foreach ($items as $item)
                 <tr>
+                    <td class="image"><img src="{{$item->image}}"></td>
                     <td><a href="/search/detail/{{ $item->id }}">{{$item->title}}</a></td>
                     <td>著書：{{$item->author}}</td>
                     <td>出版社：{{$item->publisher}}</td>
