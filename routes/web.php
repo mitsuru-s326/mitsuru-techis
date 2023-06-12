@@ -58,7 +58,7 @@ use Illuminate\Support\Facades\Route;
     });
 
     // 「ホーム画面に戻る」ボタンがクリックされたときの遷移を取得
-
+    Route::get('item/home', [App\Http\Controllers\ItemController::class, 'ReturnHome'])->name('return');;
 
     // 「商品の編集画面へ」ボタンがクリックされたときの遷移を取得
     Route::get('item/edit/{id}', [App\Http\Controllers\ItemController::class, 'GetUpdateItem'])->name('item');

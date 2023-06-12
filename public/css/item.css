@@ -1,4 +1,4 @@
-/* 共通 */
+/* 全画面共通 */
 
 body{
 height:100vh;
@@ -13,9 +13,28 @@ header{
     padding-top: 10px;
 }
 
+header p{
+    margin-top:10px;
+    margin-bottom:0px;
+}
+
 main{
-    margin-top:100px;
+    margin-top:150px;
 }  
+
+/* 登録・編集画面共通 */
+
+.error-display{
+    width:70%;
+    margin:auto;
+    color:white;
+    background-color: red;
+    border-radius: 10px;
+    margin-bottom:0px;
+    margin-top:10px;
+    text-decoration: none;
+    list-style: none;
+}
 
 /* 商品一覧画面 */
 
@@ -26,7 +45,7 @@ main{
 
 .index-book-information{
     width:45%;
-    /* height:280px; */
+    height:300px;
     align-items: center;
     display:flex;
     background-color:rgb(230, 162, 73);
@@ -43,26 +62,35 @@ main{
 
 .index-book-image img{
     width:200px;
-    height:250px;
+    height:270px;
     margin:auto;
-    padding-left:10px;
+    padding-left:15px;
 }
 
 .index-book-details{
-    width:100%;
+    width:100%; 
     list-style:none;
     text-align:left;
     margin-top:20px;
     margin-bottom:10px;
+    margin-right:5px;
     margin-left:20px;
 }
+
+.index-book-details li p{
+    height:50px;
+    overflow:auto; 
+    margin-bottom:2px;
+}
+
+/* スクロールバーを表示しない方法（今回は使用せず） */
+/* .index-book-details li p::-webkit-scrollbar{
+    display: none;
+} */
 
 .index-book-details li button{
     margin-top:5px;
     margin-bottom:5px;
-}
-
-.index-book-details button{
     width: 150px;
     text-decoration:none;
     border-radius: 10px;
@@ -80,10 +108,19 @@ main{
     margin-top:20px;
 }
 
+.registration-book-details input{
+    height:1.8rem;
+}
+
+.registration-book-details select{
+   line-height:1.1rem;
+}
+
 .registration-book-details p{
     font-size: large;
     font-weight:bold;
     margin-top:15px;
+    margin-bottom:1px;
 }
 
 .registration-book-details button{
@@ -94,20 +131,50 @@ main{
 
 /* 編集画面 */
 
+.edit-area{
+    width:100%;
+    display:flex;
+}
+
+.edit-book-side{
+    width:20%;
+    margin-left:50px;
+}
+
+.edit-book-side p{
+    font-size: large;
+    font-weight:bold;
+}
+
+.edit-book-image img{
+    width:200px;
+    height:auto;
+}
+
 .edit-book-details{
-    width:90%;
+    width:80%;
     margin:auto;
-    margin-top:20px;
+    margin-right:150px;
+}
+
+.edit-book-details input{
+    height:1.8rem;
+}
+
+.edit-book-details select{
+   line-height:1.1rem;
 }
 
 .edit-book-details p{
     font-size: large;
     font-weight:bold;
     margin-top:15px;
+    margin-bottom:1px;
 }
 
 .edit-book-details button{
     width: 200px;
     height: 50px;
     border-radius: 10px;
+    margin-top:15px;
 }
