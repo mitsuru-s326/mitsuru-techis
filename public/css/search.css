@@ -8,8 +8,9 @@ body {
 }
 
 .detail-list hr {
-    margin-left: 40px;
+    /* margin-left: 40px; */
     margin-bottom: 20px;
+    color: green;
 }
 
 h1 {
@@ -74,11 +75,18 @@ h1 {
 .detail-list li {
     list-style: none;
     font-size: 1.5em;
+    /* border-bottom: solid 0.5px gray; */
     margin: 8px 0px 15px 40px;
 }
 
 .detail-list li.title {
     font-size: 2.2em;
+    color: darkgreen;
+}
+
+.detail-list li.introduction{
+    margin-top: 25px;
+    /* color: green; */
 }
 
 .detail-list tr {

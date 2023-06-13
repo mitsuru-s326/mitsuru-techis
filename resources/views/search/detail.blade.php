@@ -17,29 +17,30 @@
                         <li class="title">{{$item->title}}</li>
                         <br>
                         <li>
-                            著者：{{$item->author}}
+                            著者　　：{{$item->author}}
                         </li>
                         <li>
-                            出版社：{{$item->publisher}}
+                            出版社　：{{$item->publisher}}
                         </li>
                         <li>
-                            ジャンル：{{$item->genre}}
+                            ジャンル　：{{$item->genre}}
                         </li>
                         <br>
                         <li>
-                            価格：{{$item->price}}円
+                            価格　　：{{$item->price}}円
                         </li>
                         <li>
-                            在庫数：{{$item->inventory}}冊
+                            在庫数　：{{$item->inventory}}冊
                         </li>
                     </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td class="introduction">
-                        <hr>
                         <li class="introduction">
-                            概要：{{$item->introduction}}
+                            概要
+                            <hr>
+                            {{$item->introduction}}
                         </li>
                     </td>
                 </tr>

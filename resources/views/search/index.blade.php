@@ -4,7 +4,7 @@
 
 <div class="header">
 <h1 class="text-center">一覧画面</h1>
-<a class="btn btn-outline-secondary" href="/">ホームに戻る</a>
+<a class="btn btn-outline-secondary" href="/home">ホーム画面に戻る</a>
 </div>
 
 <!-- 検索機能 -->
