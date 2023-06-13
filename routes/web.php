@@ -48,10 +48,6 @@ use Illuminate\Support\Facades\Route;
     Route::post('/logout',[App\Http\Controllers\AccountController::class, 'logoutAuth'] );
 
 
-//ホーム画面にアカウントのニックネームを取得
-Route::get('/nickname', [App\Http\Controllers\AccountController::class, 'nickname']);
-
-
 
 // 商品一覧画面を表示する場合はここを通す
     Route::get('item/', [App\Http\Controllers\ItemController::class, 'GetIndex'])->name('index');
@@ -89,17 +85,7 @@ Route::get('/nickname', [App\Http\Controllers\AccountController::class, 'nicknam
     Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
 
 
-// 商品閲覧・検索・詳細
 
-//登録商品一覧の表示
-Route::get('/search', [\App\Http\Controllers\SearchController::class, 'index']);
-
-//登録商品の詳細画面
-Route::get('/search/detail/{id}', [\App\Http\Controllers\SearchController::class, 'detail']);
-
-
-
-
-// ホーム画面 //
+// ホーム画面　//
 Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
 

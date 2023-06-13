@@ -12,6 +12,11 @@
 
 <div class="bg_test">
     
+<!-- ログイン画面に遷移するボタン -->
+<div class="user_register">
+      <a style= color:aliceblue  style= font-weight:400 href="/" target="_blank">>> ログイン画面へ</a>
+</div>
+<!-- <button type="submit" class="btn btn-success" onclick="location.href='/'">ユーザーの登録</button> -->
 
 
 <!-- ユーザー登録用パネル… -->

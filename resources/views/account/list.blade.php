@@ -10,11 +10,11 @@
 
 <div class="bg_test">
 
-
 <div class="bg_test-text">
   <div class="user_register">
       <a style=color:white;  style= font-weight:400 href="toroku" target="_blank">>>アカウント登録画面へ</a>
   </div>
+
 
 <div class="table-responsive">
 
@@ -45,6 +45,12 @@
 </table>
 </div>
 </div>
+<br>
+<!-- <アカウントログアウトボタン>     -->
+<form action="/logout" method="POST">
+                    {{ csrf_field() }}
+    <button type="submit" class="btn btn-success">ログアウト</button>
+  </form>
 </div> 
       
 </body>
