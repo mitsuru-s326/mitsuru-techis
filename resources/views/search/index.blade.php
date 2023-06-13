@@ -2,7 +2,10 @@
 
 <div class="container">
 
+<div class="header">
 <h1 class="text-center">一覧画面</h1>
+<a class="btn btn-outline-secondary" href="/">ホームに戻る</a>
+</div>
 
 <!-- 検索機能 -->
 <div class="search-form">
@@ -36,12 +39,15 @@
                 <tr>
                     <td class="image"><img src="{{$item->image}}"></td>
                     <td>
-                        <li><a href="/search/detail/{{ $item->id }}">{{$item->title}}</a></li>
+                        <li class="title"><a href="/search/detail/{{ $item->id }}">{{$item->title}}</a></li>
                         <li>
-                        著書：{{$item->author}}
+                        著者：{{$item->author}}
                         </li>
                         <li>
                         出版社：{{$item->publisher}}
+                        </li>
+                        <li>
+                        ジャンル：{{$item->genre}}
                         </li>
                     </td>
                 </tr>
