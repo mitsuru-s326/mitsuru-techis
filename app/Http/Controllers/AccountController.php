@@ -101,6 +101,13 @@ class AccountController extends Controller
             return redirect('/');
         }
 
+// ログアウトする画面に遷移する関数        
+        public function logout(){
+            return view('account.logout'); 
+        }  
+
+ // アカウントをログインしてセッションをつけてホーム画面に遷移する関数
+
         public function loginAuth(Request $request)
         {
            // メールアドレスとパスワードのバリデーション
@@ -141,4 +148,17 @@ class AccountController extends Controller
         //    return redirect("/")->with("imessage", "ログインに成功しました。");
 
         }
+
+        // アカウントをログアウトしてセッションを外してホーム画面に遷移する関数
+        public function logoutAuth(Request $request)
+        
+        {
+            session()->forget(['id','is_admin']);
+    
+               // ログアウトが成功したら「/（ログイン画面）」へリダイレクト
+                  return redirect("/");
+        }
+
+
+
 }

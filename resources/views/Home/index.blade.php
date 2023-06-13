@@ -17,9 +17,14 @@
             <h1>ホーム画面へようこそ</h1>
             <h2>この商品管理システムは本の在庫状況を管理するためのシステムです</h2>
         </div>
-        <div class="user-wrapper">
-            <button class="button3">ログアウト</button>
-            <h3>ログイン中 〇〇さん</h3>
+        <div class="user-wrapper">           
+            <!-- <アカウントログアウトボタン>     -->
+            <form action="/logout" method="POST">
+                    {{ csrf_field() }}
+                <button type="submit" class="button3">ログアウト</button>
+            </form>
+                <h3>ログイン中〇〇さん</h3>
+        </div>
         </div>
     </div>
 </body>
