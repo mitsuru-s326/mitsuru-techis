@@ -27,10 +27,7 @@
                         </li>
                         <br>
                         <li>
-                            価格　　：{{$item->price}}円
-                        </li>
-                        <li>
-                            在庫数　：{{$item->inventory}}冊
+                            価格：{{$item->price}}円　/　在庫数：{{$item->inventory}}冊
                         </li>
                     </td>
                 </tr>
