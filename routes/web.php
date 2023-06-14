@@ -44,6 +44,27 @@ use Illuminate\Support\Facades\Route;
     //ログアウト機能
     Route::post('/logout',[App\Http\Controllers\AccountController::class, 'logoutAuth'] );
 
+
+
+    // ホーム画面//
+        Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
+
+
+
+    // ホーム画面　//
+    Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
+
+        });
+
+
+
+//管理者（is_adminが"１"の登録）のログイン情報があるかどうかをチェックするミドルウェア
+        Route::middleware(['login_admin'])->group(function () {
+
+//アカウント一覧画面
+    //アカウント一覧画面を取得
+        Route::get('/list', [App\Http\Controllers\AccountController::class, 'list']);
+
     // 商品一覧画面を表示する場合はここを通す
     Route::get('item/', [App\Http\Controllers\ItemController::class, 'GetIndex'])->name('index');
 
@@ -76,21 +97,6 @@ use Illuminate\Support\Facades\Route;
         // 「更新」ボタンがクリックされたときの遷移を取得
         Route::post('item/edit/update/{id}', [App\Http\Controllers\ItemController::class, 'UpdateItem'])->name('update');
 
-    // ホーム画面//
-        Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
-
-
-
-    // ホーム画面　//
-    Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
-
-        });
-
-    //管理者（is_adminが"１"の登録）のログイン情報があるかどうかをチェックするミドルウェア
-        Route::middleware(['login_admin'])->group(function () {
-//アカウント一覧画面
-    //アカウント一覧画面を取得
-        Route::get('/list', [App\Http\Controllers\AccountController::class, 'list']);
         });
 
 
