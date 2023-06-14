@@ -12,16 +12,16 @@
         <div class="btn-wrapper">
             <ul>
                 <li class="list-1">
-                    <a class="button" href="/search/index.blade.php">商品一覧</a>
+                    <a class="button" href="/search">商品一覧</a>
                  </li>
-            {{-- @can() --}}
+                @if(session("is_admin")==1) 
                 <li class="list-2">
-                    <a class="button2" href="/items">商品管理</a>
+                    <a class="button2" href="/item">商品管理</a>
                 </li>
                 <li class="list-3">
-                     <a class="button3" href="/account/list.index.php">利用者一覧</a>
+                     <a class="button3" href="/list">利用者一覧</a>
                 </li>
-            {{-- @endcan --}}
+                @endif
         </div>
         <div class="content-wrapper">
             <h1>ホーム画面へようこそ</h1>
@@ -29,9 +29,9 @@
         </div>
         <div class="user-wrapper">
             <div class="user-btn">
-                <a class="button4" href="account/index.php">ログアウト</a>
+                <a class="button4" href="/logout">ログアウト</a>
             </div>
-            <h3>ログイン中 {{-- <php> $user = Auth::user(); ?>{{ $user->nick_name }} --}}</h3>
+            <h3>ログイン中 {{ $user->nick_name }}さん</h3>
         </div>
     </div>
 </body>
