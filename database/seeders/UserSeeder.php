@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -18,8 +19,8 @@ class UserSeeder extends Seeder
                 'name' => '管理者',
                 'nick_name' =>'アドミンユーザー',
                 'email' => 'team158@gmail.com',
-                'password' => bcrypt('password'),
-                // 'password' =>Hash::make('password'),
+                // 'password' => bcrypt('password'),
+                'password' =>Hash::make('password'),
                 'is_admin' => '1',
             ]);
         

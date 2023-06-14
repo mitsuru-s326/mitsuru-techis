@@ -12,7 +12,7 @@
 
 <div class="bg_test-text">
   <div class=list>
-  <h4> ニックネーム٩(ˊᗜˋ*)و     {{$user ->nick_name}} </h4>
+  <h4> ようこそ！  {{$user ->nick_name}} さん</h4>
   </div>
 
   <form action="{{url('AccountEdit')}}" method="POST"  class="form-horizontal" >
@@ -37,11 +37,11 @@
             <div class=sukima></div>    
                 <input type="text" name="nick_name" class="form-control" class="justify-content-center" placeholder="ニックネーム" value="{{$user ->nick_name}}">
                 <p>{{ $errors->first("nick_name") }}</p>
-            <div class=lavelColor>パスワード</div>
+            <div class=lavelColor>メールアドレス</div>
             <div class=sukima></div> 
                 <input type="text" name="email" class="form-control" class="justify-content-center" placeholder="メールアドレス" value="{{ $user ->email}}">
                 <p>{{ $errors->first("email") }}</p>
-            <div class=lavelColor>パスワード確認</div>
+            <div class=lavelColor>メールアドレス確認</div>
             <div class=sukima></div> 
                 <input type="text" name="email_confirmation" class="form-control" class="justify-content-center" placeholder="メールアドレス確認用" value="{{ $user ->email}}">
                 <p></p>

@@ -1,13 +1,13 @@
 @include('account.common')
 <head>
 <div>
-    <title>ユーザー登録画面</title>
+    <title>アカウント登録画面</title>
 </div>
 </head>
 
 <body class="container">
 
-<h2><i class="far fa-lightbulb"></i><span>ユーザー登録画面</span></h2>
+<h2><i class="far fa-lightbulb"></i><span>アカウント登録画面</span></h2>
 
 
 <div class="bg_test">
@@ -64,7 +64,7 @@
 
         <!-- ユーザー追加ボタン -->
         <div class="form-group">
-                <button type="submit" class="btn btn-success" onclick="location.href='login'">ユーザーの登録</button>
+                <button type="submit" class="btn btn-success" onclick="location.href='login'">アカウント登録</button>
         </div>
        
     </form>
