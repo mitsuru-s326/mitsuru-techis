@@ -36,7 +36,7 @@
                 <input type="text" name="email" class="form-control" class="justify-content-center" placeholder="メールアドレス" >
             <div class=lavelColor><div class=text1>パスワード入力</div></div>
             <div class=sukima></div>   
-                <input type="text" name="password" class="form-control" class="justify-content-center" placeholder="パスワード" >
+                <input type="password" name="password" class="form-control" class="justify-content-center" placeholder="パスワード" >
                 
                 @if ($errors->any())
                 <p class="error-message" style= color:green>入力内容をご確認ください。</p>

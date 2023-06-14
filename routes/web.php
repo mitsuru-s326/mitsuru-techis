@@ -35,58 +35,71 @@ use Illuminate\Support\Facades\Route;
         Route::post('AccountDestroy', [App\Http\Controllers\AccountController::class, 'AccountDestroy']);
         //ログイン認証
         Route::post('/auth',[App\Http\Controllers\AccountController::class, 'loginAuth'] );
-    //ログイン情報があるかどうかをチェックするミドルウェア
-        Route::middleware(['login_auth'])->group(function () {});
 
-    //管理者（is_adminが"１"の登録）のログイン情報があるかどうかをチェックするミドルウェア
-        Route::middleware(['login_admin'])->group(function () {
-//アカウント一覧画面
-    //アカウント一覧画面を取得
-        Route::get('/list', [App\Http\Controllers\AccountController::class, 'list']);
-        });
-//ログアウト機能
+//ミドルウェア（アカウント認証機能）
+
+        //ログイン情報があるかどうかをチェックするミドルウェア
+        Route::middleware(['login_auth'])->group(function () {
+
+    //ログアウト機能
     Route::post('/logout',[App\Http\Controllers\AccountController::class, 'logoutAuth'] );
 
 
-//ホーム画面にアカウントのニックネームを取得
-Route::get('/nickname', [App\Http\Controllers\AccountController::class, 'nickname']);
+
+    // ホーム画面//
+        Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
 
 
 
-// 商品一覧画面を表示する場合はここを通す
+    // ホーム画面　//
+    Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
+
+        });
+
+
+
+//管理者（is_adminが"１"の登録）のログイン情報があるかどうかをチェックするミドルウェア
+        Route::middleware(['login_admin'])->group(function () {
+
+//アカウント一覧画面
+    //アカウント一覧画面を取得
+        Route::get('/list', [App\Http\Controllers\AccountController::class, 'list']);
+
+    // 商品一覧画面を表示する場合はここを通す
     Route::get('item/', [App\Http\Controllers\ItemController::class, 'GetIndex'])->name('index');
 
 
-// 商品一覧画面
+    // 商品一覧画面
 
-    // 「商品の新規登録画面へ」ボタンがクリックされたときの遷移を取得
-    Route::get('item/registration', function () {
-        return view('items.registration');
-    });
+        // 「商品の新規登録画面へ」ボタンがクリックされたときの遷移を取得
+        Route::get('item/registration', function () {
+            return view('items.registration');
+        });
 
-    // 「ホーム画面に戻る」ボタンがクリックされたときの遷移を取得
-    Route::get('item/home', [App\Http\Controllers\ItemController::class, 'ReturnHome'])->name('return');;
+        // 「ホーム画面に戻る」ボタンがクリックされたときの遷移を取得
+        Route::get('item/home', [App\Http\Controllers\ItemController::class, 'ReturnHome'])->name('return');;
 
-    // 「商品の編集画面へ」ボタンがクリックされたときの遷移を取得
-    Route::get('item/edit/{id}', [App\Http\Controllers\ItemController::class, 'GetUpdateItem'])->name('item');
+        // 「商品の編集画面へ」ボタンがクリックされたときの遷移を取得
+        Route::get('item/edit/{id}', [App\Http\Controllers\ItemController::class, 'GetUpdateItem'])->name('item');
 
-    // 「削除」ボタンがクリックされたときの遷移を取得
-    Route::get('item/edit/delete/{id}', [App\Http\Controllers\ItemController::class, 'DeleteItem'])->name('deletion');
-
-
-// // 商品登録画面
-
-    // 「商品新規登録画面へ」ボタンがクリックされたときの遷移を取得
-    Route::post('item/registration', [App\Http\Controllers\ItemController::class, 'RegisterItem'])->name('registration');
+        // 「削除」ボタンがクリックされたときの遷移を取得
+        Route::get('item/edit/delete/{id}', [App\Http\Controllers\ItemController::class, 'DeleteItem'])->name('deletion');
 
 
-// // 商品編集画面
+    // // 商品登録画面
 
-    // 「更新」ボタンがクリックされたときの遷移を取得
-    Route::post('item/edit/update/{id}', [App\Http\Controllers\ItemController::class, 'UpdateItem'])->name('update');
+        // 「商品新規登録画面へ」ボタンがクリックされたときの遷移を取得
+        Route::post('item/registration', [App\Http\Controllers\ItemController::class, 'RegisterItem'])->name('registration');
 
-// ホーム画面//
-    Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
+
+    // // 商品編集画面
+
+        // 「更新」ボタンがクリックされたときの遷移を取得
+        Route::post('item/edit/update/{id}', [App\Http\Controllers\ItemController::class, 'UpdateItem'])->name('update');
+
+        });
+
+
 
 
 //登録商品一覧・検索・詳細画面
