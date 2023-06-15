@@ -102,5 +102,10 @@ use Illuminate\Support\Facades\Route;
 
 
 
+//登録商品一覧・検索・詳細画面
 
+    //登録商品一覧の表示
+    Route::get('/search', [\App\Http\Controllers\SearchController::class, 'index']);
 
+    //登録商品の詳細画面
+    Route::get('/search/detail/{id}', [\App\Http\Controllers\SearchController::class, 'detail']);

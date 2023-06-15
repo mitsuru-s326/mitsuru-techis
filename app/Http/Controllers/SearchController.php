@@ -32,3 +32,4 @@ class SearchController extends Controller
         return view('search.detail', ['item'=>$item]);
     }
 }
+

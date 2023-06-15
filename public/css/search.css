@@ -1,6 +1,119 @@
-
-h1 {
-
-
+body {
+    /*     background-image: url(../img/Search/mizutama.png);  */
 }
 
+.container {
+    max-width: 850px;
+    background-color: white;
+}
+
+.detail-list hr {
+    /* margin-left: 40px; */
+    margin-bottom: 20px;
+    color: green;
+}
+
+h1 {
+    margin: 30px 0px;
+    background-color: lightgreen;
+    border-radius: 0.5rem;
+    padding: 10px 0px;
+}
+
+.search-form {
+    float: right;
+    margin: 15px 0px 0px;
+}
+
+.list-form {
+    clear: both;
+}
+
+.all-list {
+    display: flex;
+}
+
+.all-list li {
+    list-style: none;
+    font-size: 1.2em;
+    margin: 8px 0px 15px;
+}
+
+.all-list li.title {
+    font-size: 2em;
+}
+
+.all-list td {
+    height: 250px;
+    padding: 19px 20px;
+}
+
+.all-list td.image {
+    width: 25%;
+    /* outline: solid 0.5px lightgray; */
+    /* outline-offset: -20px; */
+    text-align: center;
+}
+
+.all-list img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    /* border-radius: 0.25rem; */
+}
+
+.detail-list {
+    display: flex;
+}
+
+.detail-list table {
+    width: 850px;
+    table-layout: fixed;
+    margin-top: 30px;
+}
+
+.detail-list li {
+    list-style: none;
+    font-size: 1.5em;
+    /* border-bottom: solid 0.5px gray; */
+    margin: 8px 0px 15px 40px;
+}
+
+.detail-list li.title {
+    font-size: 2.2em;
+    color: darkgreen;
+}
+
+.detail-list li.introduction{
+    margin-top: 25px;
+    /* color: green; */
+}
+
+.detail-list tr {
+    /* width: 100%; */
+    /* overflow-wrap: break-word; */
+}
+
+.detail-list td {
+    height: 350px;
+}
+
+.detail-list td.image {
+    width: 350px;
+    /* outline: solid 0.5px lightgray; */
+    /* outline-offset: -20px; */
+    text-align: center;
+}
+
+.detail-list td.introduction {
+    vertical-align: top;
+    word-wrap: break-word;
+}
+
+.detail-list img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: top;
+    /* border-radius: 0.25rem; */
+}
