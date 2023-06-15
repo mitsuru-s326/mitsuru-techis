@@ -1,17 +1,22 @@
 @include('account.common')
 <head>
 <div>
-    <title>ユーザー登録画面</title>
+    <title>アカウント登録画面</title>
 </div>
 </head>
 
 <body class="container">
 
-<h2><i class="far fa-lightbulb"></i><span>ユーザー登録画面</span></h2>
+<h2><i class="far fa-lightbulb"></i><span>アカウント登録画面</span></h2>
 
 
 <div class="bg_test">
     
+<!-- ログイン画面に遷移するボタン -->
+<div class="user_register">
+      <a style= color:aliceblue  style= font-weight:400 href="/" target="_blank">>> ログイン画面へ</a>
+</div>
+<!-- <button type="submit" class="btn btn-success" onclick="location.href='/'">ユーザーの登録</button> -->
 
 
 <!-- ユーザー登録用パネル… -->
@@ -49,17 +54,17 @@
                         <p></p>
                     <div class=lavelColor><label>パスワード</label></div>
                     <div class=sukima></div>    
-                        <input type="text" name="password" class="form-control" class="justify-content-center" placeholder="パスワード">
+                        <input type="password" name="password" class="form-control" class="justify-content-center" placeholder="パスワード">
                         <p style= color:green>{{ $errors->first("password") }}</p>
                     <div class=lavelColor><label>パスワード確認用</label></div>
                     <div class=sukima></div>
-                        <input type="text" name="password_confirmation" class="form-control" class="justify-content-center" placeholder="パスワード確認用">
+                        <input type="password" name="password_confirmation" class="form-control" class="justify-content-center" placeholder="パスワード確認用">
                         <p></p>
         </div>
 
         <!-- ユーザー追加ボタン -->
         <div class="form-group">
-                <button type="submit" class="btn btn-success" onclick="location.href='login'">ユーザーの登録</button>
+                <button type="submit" class="btn btn-success" onclick="location.href='login'">アカウント登録</button>
         </div>
        
     </form>
