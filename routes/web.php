@@ -42,7 +42,7 @@ use Illuminate\Support\Facades\Route;
         Route::middleware(['login_auth'])->group(function () {
 
     //ログアウト機能
-    Route::post('/logout',[App\Http\Controllers\AccountController::class, 'logoutAuth'] );
+    Route::get('/logout',[App\Http\Controllers\AccountController::class, 'logoutAuth'] );
 
 
 
@@ -99,6 +99,23 @@ use Illuminate\Support\Facades\Route;
 
         });
 
+
+// // 商品編集画面
+
+    // 「更新」ボタンがクリックされたときの遷移を取得
+    Route::post('item/edit/update/{id}', [App\Http\Controllers\ItemController::class, 'UpdateItem'])->name('update');
+
+// ホーム画面//
+    Route::get('/home',[App\Http\Controllers\HomeController::class, 'home']);
+
+
+// 商品閲覧・検索・詳細
+
+//登録商品一覧の表示
+Route::get('/search', [\App\Http\Controllers\SearchController::class, 'index']);
+
+//登録商品の詳細画面
+Route::get('/search/detail/{id}', [\App\Http\Controllers\SearchController::class, 'detail']);
 
 
 
