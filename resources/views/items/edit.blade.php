@@ -85,7 +85,7 @@
                     
                 <div>
                     <p>画像のアップロード</p>
-                    <input class="form-control" type="file" name="image" accept="image/jpg, image/jpeg, image/png, image/gif">
+                    <input class="form-control" type="file" name="image" accept="image/jpg, image/jpeg, image/png">
                         @if($errors->has('image'))
                             @foreach($errors->get('image') as $message)
                             <div class ="error-display">{{ $message }}</div>

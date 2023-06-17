@@ -13,8 +13,7 @@ class ItemController extends Controller
     public function GetIndex(Request $request)
     {
         // 商品一覧を取得する関数
-        $items = Item::where("status", "active")->latest()->get();
-
+        $items = Item::where("status", "active")->latest()->paginate(6);
         return view('items.index', ["items" => $items]);
     }
 
@@ -23,12 +22,12 @@ class ItemController extends Controller
         //  新しい本の情報を登録する関数
 
             $this->validate($request, [
-            'title' => 'required|max:20',
-            'author' => 'required|max:20',
-            'publisher' => 'required|max:20',
-            'genre' => 'required|max:20',
+            'title' => 'required|max:30',
+            'author' => 'required|max:30',
+            'publisher' => 'required|max:30',
+            'genre' => 'required|max:30',
             'introduction' =>'required|max:200',
-            'image' =>'required|max:1000|mimes:jpg,jpeg,png,gif',
+            'image' =>'required|max:64|mimes:jpg,jpeg,png',
             'price' => 'required|integer|min:1',
             'inventory' => 'required|integer|min:0',
             ]);
@@ -55,17 +54,15 @@ class ItemController extends Controller
         // dd($request->image ?? true);
 
         $this->validate($request, [
-            'title' => 'required|max:20',
-            'author' => 'required|max:20',
-            'publisher' => 'required|max:20',
-            'genre' => 'required|max:20',
+            'title' => 'required|max:30',
+            'author' => 'required|max:30',
+            'publisher' => 'required|max:30',
+            'genre' => 'required|max:30',
             'introduction' =>'required|max:200',
-            'image' => 'mimes:jpg,jpeg,png,gif',
+            'image' =>'max:64|mimes:jpg,jpeg,png',
             'price' => 'required|integer|min:1',
             'inventory' => 'required|integer|min:0',
             ]);
-       
-
 
         $item = Item::find($id);
 
