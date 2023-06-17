@@ -38,75 +38,63 @@ use Illuminate\Support\Facades\Route;
 
 //ミドルウェア（アカウント認証機能）
 
-        //ログイン情報があるかどうかをチェックするミドルウェア
-        Route::middleware(['login_auth'])->group(function () {
+    //ログイン情報があるかどうかをチェックするミドルウェア
+    Route::middleware(['login_auth'])->group(function () {
 
-            //ログアウト機能
-            Route::get('/logout',[App\Http\Controllers\AccountController::class, 'logoutAuth'] );
-            // ホーム画面//
-            Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
-            // ホーム画面//
-            Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
+        //ログアウト機能
+        Route::get('/logout',[App\Http\Controllers\AccountController::class, 'logoutAuth'] );
 
-        });
+        // ホーム画面//
+            Route::get('/home',[App\Http\Controllers\HomeController::class, 'home']);
+
+        // 商品閲覧・検索・詳細
+
+        //登録商品一覧の表示
+        Route::get('/search', [\App\Http\Controllers\SearchController::class, 'index']);
+
+        //登録商品の詳細画面
+        Route::get('/search/detail/{id}', [\App\Http\Controllers\SearchController::class, 'detail']);    
+
+    });
+
 
 //管理者（is_adminが"１"の登録）のログイン情報があるかどうかをチェックするミドルウェア
         Route::middleware(['login_admin'])->group(function () {
 
-            //アカウント一覧画面
-            
-            //アカウント一覧画面を取得
-                Route::get('/list', [App\Http\Controllers\AccountController::class, 'list']);
+    //アカウント一覧画面
 
-            // 商品一覧画面を表示する場合はここを通す
-            Route::get('item/', [App\Http\Controllers\ItemController::class, 'GetIndex'])->name('index');
+        //アカウント一覧画面を取得
+            Route::get('/list', [App\Http\Controllers\AccountController::class, 'list']);
 
-            // 商品一覧画面
+        // 商品一覧画面を表示する場合はここを通す
+        Route::get('item/', [App\Http\Controllers\ItemController::class, 'GetIndex'])->name('index');
 
-            // 「商品の新規登録画面へ」ボタンがクリックされたときの遷移を取得
-            Route::get('item/registration', function () {
-                return view('items.registration');
-            });
+    // 商品一覧画面
 
-
-            // 「商品の編集画面へ」ボタンがクリックされたときの遷移を取得
-            Route::get('item/edit/{id}', [App\Http\Controllers\ItemController::class, 'GetUpdateItem'])->name('item');
-
-            // 「削除」ボタンがクリックされたときの遷移を取得
-            Route::get('item/edit/delete/{id}', [App\Http\Controllers\ItemController::class, 'DeleteItem'])->name('deletion');
-
-            // // 商品登録画面
-
-            // 「商品新規登録画面へ」ボタンがクリックされたときの遷移を取得
-            Route::post('item/registration', [App\Http\Controllers\ItemController::class, 'RegisterItem'])->name('registration');
-
-            // // 商品編集画面
-
-            // 「更新」ボタンがクリックされたときの遷移を取得
-            Route::post('item/edit/update/{id}', [App\Http\Controllers\ItemController::class, 'UpdateItem'])->name('update');
-
+        // 「商品の新規登録画面へ」ボタンがクリックされたときの遷移を取得
+        Route::get('item/registration', function () {
+            return view('items.registration');
         });
 
-// // 商品編集画面
+        // 「ホーム画面に戻る」ボタンがクリックされたときの遷移を取得
+        Route::get('item/home', [App\Http\Controllers\ItemController::class, 'ReturnHome'])->name('return');;
 
-    // 「更新」ボタンがクリックされたときの遷移を取得
-    Route::post('item/edit/update/{id}', [App\Http\Controllers\ItemController::class, 'UpdateItem'])->name('update');
+        // 「商品の編集画面へ」ボタンがクリックされたときの遷移を取得
+        Route::get('item/edit/{id}', [App\Http\Controllers\ItemController::class, 'GetUpdateItem'])->name('item');
 
-// ホーム画面//
-    Route::get('/home',[App\Http\Controllers\HomeController::class, 'home']);
+        // 「削除」ボタンがクリックされたときの遷移を取得
+        Route::get('item/edit/delete/{id}', [App\Http\Controllers\ItemController::class, 'DeleteItem'])->name('deletion');
 
-// 商品閲覧・検索・詳細
+    // // 商品登録画面
 
-    //登録商品一覧の表示
-    Route::get('/search', [\App\Http\Controllers\SearchController::class, 'index']);
+        // 「商品新規登録画面へ」ボタンがクリックされたときの遷移を取得
+        Route::post('item/registration', [App\Http\Controllers\ItemController::class, 'RegisterItem'])->name('registration');
 
-//登録商品の詳細画面
-    Route::get('/search/detail/{id}', [\App\Http\Controllers\SearchController::class, 'detail']);
+    // // 商品編集画面
 
-//登録商品一覧・検索・詳細画面
+        // 「更新」ボタンがクリックされたときの遷移を取得
+        Route::post('item/edit/update/{id}', [App\Http\Controllers\ItemController::class, 'UpdateItem'])->name('update');
 
-    //登録商品一覧の表示
-    Route::get('/search', [\App\Http\Controllers\SearchController::class, 'index']);
+});
 
-    //登録商品の詳細画面
-    Route::get('/search/detail/{id}', [\App\Http\Controllers\SearchController::class, 'detail']);
+

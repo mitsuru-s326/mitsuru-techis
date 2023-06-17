@@ -111,7 +111,6 @@ main{
     justify-content:center;
 }
 
-
 /* 登録画面 */
 
 .registration-book-details{
@@ -191,8 +190,3 @@ main{
     margin-top:15px;
 }
 
-/* 'image' => [
-    'required'=>'画像を選択して下さい。',
-    'max'  => '画像の容量が大きすぎます。容量を小さくして下さい。',
-],
- */
