@@ -46,6 +46,11 @@
 </div>
 </div>
 <br>
+<!-- <ホーム画面へのボタン>     -->
+<form action="/home" method="GET">
+                    {{ csrf_field() }}
+    <button type="submit" class="btn btn-success">ホーム画面</button>
+  </form>
 <!-- <アカウントログアウトボタン>     -->
 <form action="/logout" method="GET">
                     {{ csrf_field() }}
