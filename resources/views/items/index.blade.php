@@ -9,8 +9,10 @@
   <header>
     <p><b>本画面はプログラミング学習用に作成されたものであり、実際の商品の販売を目的としたものではありません。</b></P><br>
     <h1>商品一覧画面（管理者用）</h1>
-    <button class="w-200 btn btn-lg"><a href="/item/registration">商品新規登録画面へ</a></button>
-    <button class="w-200 btn btn-lg"><a href="/home">ホーム画面へ戻る</a></button>
+    <div>
+      <button class="w-200 btn btn-lg"><a href="/item/registration">商品新規登録画面へ</a></button>
+      <button class="w-200 btn btn-lg"><a href="/home">ホーム画面へ戻る</a></button>
+    </div>
   </header>
 
   <br>
@@ -39,9 +41,13 @@
         </div>
       @endforeach 
     </div>
+
   </main>
 
+  <footer>
+  <div>{{$items->links('pagination::bootstrap-4')}}</div>
+  </footer>
+  
   <br>
 
-  
 </body>

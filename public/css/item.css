@@ -18,8 +18,14 @@ header p{
     margin-bottom:0px;
 }
 
+header div{
+    width:98%;
+    display:flex;
+    justify-content:center;
+}
+
 main{
-    margin-top:150px;
+    margin-top:150px
 }  
 
 /* 登録・編集画面共通 */
@@ -100,6 +106,12 @@ main{
     text-decoration:none;
 }
 
+.pagination{
+    width:100%;
+    justify-content:center;
+}
+
+
 /* 登録画面 */
 
 .registration-book-details{
@@ -178,3 +190,9 @@ main{
     border-radius: 10px;
     margin-top:15px;
 }
+
+/* 'image' => [
+    'required'=>'画像を選択して下さい。',
+    'max'  => '画像の容量が大きすぎます。容量を小さくして下さい。',
+],
+ */
