@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Item;
+use App\Models\User;
 
 class ItemController extends Controller
 {
@@ -16,15 +17,6 @@ class ItemController extends Controller
 
         return view('items.index', ["items" => $items]);
     }
-
-    public function ReturnHome(Request $request)
-    {
-        // ユーザーのニックネームを取得する関数
-        // $nickname = User::where("status", "active")->orderBy('created_at', 'asc')->get();
-
-        return view('home.index');
-    }
-  
 
     public function RegisterItem(Request $request)
     {

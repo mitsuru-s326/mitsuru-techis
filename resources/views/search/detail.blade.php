@@ -12,7 +12,7 @@
         <table>
             <tbody>
                 <tr>
-                    <td class="image"><img src="{{$item->image}}"></td>
+                    <td class="image"><img src="data:image/png;base64,{{$item->image}}"></td>
                     <td>
                         <li class="title">{{$item->title}}</li>
                         <br>

@@ -52,7 +52,7 @@
     <button type="submit" class="btn btn-success">ホーム画面</button>
   </form>
 <!-- <アカウントログアウトボタン>     -->
-<form action="/logout" method="POST">
+<form action="/logout" method="GET">
                     {{ csrf_field() }}
     <button type="submit" class="btn btn-success">ログアウト</button>
   </form>
