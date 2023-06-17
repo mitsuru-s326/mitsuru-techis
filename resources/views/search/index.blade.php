@@ -37,7 +37,7 @@
             <tbody>
                 @foreach ($items as $item)
                 <tr>
-                    <td class="image"><img src="{{$item->image}}"></td>
+                    <td class="image"><img src="data:image/png;base64,{{$item->image}}"></td>
                     <td>
                         <li class="title"><a href="/search/detail/{{ $item->id }}">{{$item->title}}</a></li>
                         <li>
