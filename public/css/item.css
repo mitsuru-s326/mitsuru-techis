@@ -19,7 +19,7 @@ header p{
 }
 
 header div{
-    width:98%;
+    width:100%;
     display:flex;
     justify-content:center;
 }
