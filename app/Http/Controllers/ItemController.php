@@ -22,10 +22,10 @@ class ItemController extends Controller
         //  新しい本の情報を登録する関数
 
             $this->validate($request, [
-            'title' => 'required|max:30',
-            'author' => 'required|max:30',
-            'publisher' => 'required|max:30',
-            'genre' => 'required|max:30',
+            'title' => 'required|max:20',
+            'author' => 'required|max:20',
+            'publisher' => 'required|max:20',
+            'genre' => 'required|max:20',
             'introduction' =>'required|max:200',
             'image' =>'required|max:64|mimes:jpg,jpeg,png',
             'price' => 'required|integer|min:1',
@@ -54,10 +54,10 @@ class ItemController extends Controller
         // dd($request->image ?? true);
 
         $this->validate($request, [
-            'title' => 'required|max:30',
-            'author' => 'required|max:30',
-            'publisher' => 'required|max:30',
-            'genre' => 'required|max:30',
+            'title' => 'required|max:20',
+            'author' => 'required|max:20',
+            'publisher' => 'required|max:20',
+            'genre' => 'required|max:20',
             'introduction' =>'required|max:200',
             'image' =>'max:64|mimes:jpg,jpeg,png',
             'price' => 'required|integer|min:1',

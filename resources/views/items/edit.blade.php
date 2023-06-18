@@ -74,7 +74,7 @@
                 </div>
 
                 <div>
-                    <p>本の紹介</p>
+                    <p>本の概要</p>
                     <p class="book-introduction"><input class="form-control" type="text" name="introduction" value="{{$item->introduction}}" maxlength="200" required></p>
                         @if($errors->has('introduction'))
                             @foreach($errors->get('introduction') as $message)

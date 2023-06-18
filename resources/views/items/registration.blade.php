@@ -23,13 +23,13 @@
         <form action="{{ url('item/registration')}}" method="POST" class="form-horizontal" enctype="multipart/form-data">
         @csrf      
                 <p>題名</p>
-                <input class="form-control" type="text" name="title" placeholder="題名を30文字以内で記載して下さい。" maxlength="30" required autofocus>
+                <input class="form-control" type="text" name="title" placeholder="題名を20文字以内で記載して下さい。" maxlength="20" required autofocus>
                 <p>著者名</p>
-                <input class="form-control" type="text" name="author" placeholder="著者名を30文字以内で記載して下さい。" maxlength="30" required>
+                <input class="form-control" type="text" name="author" placeholder="著者名を20文字以内で記載して下さい。" maxlength="20" required>
                 <p>出版社</p>
-                <input class="form-control" type="text" name="publisher" placeholder="出版社名を30文字以内で記載して下さい。" maxlength="30" required>
+                <input class="form-control" type="text" name="publisher" placeholder="出版社名を20文字以内で記載して下さい。" maxlength="20" required>
                 <p>ジャンル</p>
-                <select class="form-control" name="genre" maxlength="30" required>
+                <select class="form-control" name="genre" maxlength="20" required>
                     <option value ="" selected>以下から選択して下さい。</option>
                     <option value ="趣味">趣味</option>
                     <option value ="コミック">コミック</option>
