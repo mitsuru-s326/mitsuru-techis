@@ -25,8 +25,8 @@
         </div> 
 
         <div class="edit-book-details">
-            <form action="/item/edit/update/{{$item->id}}" method="POST" class="form-horizontal" enctype="multipart/form-data">@csrf      
-        
+            <form action="/item/edit/update/{{$item->id}}" method="POST" class="form-horizontal" enctype="multipart/form-data">
+                @csrf      
                 <div>
                     <p>題名</p>
                     <div><input class="form-control" type="text" name="title" value="{{$item->title}}" required autofocus></div>
