@@ -26,8 +26,9 @@ class AppServiceProvider extends ServiceProvider
         //
         if (\App::environment(['production'])) {
             \URL::forceScheme('https');
-        }
+            $this->app['request']->server->set('HTTPS','on');
 
         \Illuminate\Support\Facades\Schema::defaultStringLength(191);
+        }
     }
 }
