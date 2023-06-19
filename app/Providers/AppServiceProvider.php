@@ -29,5 +29,6 @@ class AppServiceProvider extends ServiceProvider
             $this->app['request']->server->set('HTTPS','on');
 
         \Illuminate\Support\Facades\Schema::defaultStringLength(191);
+        }
     }
 }
