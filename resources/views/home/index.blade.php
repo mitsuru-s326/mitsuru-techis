@@ -24,7 +24,7 @@
                 @endif
         </div>
         <div class="content-wrapper">
-            <h1>ホーム画面へようこそ</h1>
+            <h1>ホームへようこそ</h1>
             <h2>この商品管理システムは本の在庫状況を管理するためのシステムです</h2>
         </div>
         <div class="user-wrapper">
