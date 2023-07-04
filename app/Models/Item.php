@@ -12,13 +12,12 @@ class Item extends Model
 
     protected $fillable = [
         'title',
-        'author',
-        'publisher',
         'genre',
+        'time',
         'introduction',
-        'image',
+        'material',
         'price',
-        'inventory',
+        'image',
     ];
 
 }

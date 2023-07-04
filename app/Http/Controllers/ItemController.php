@@ -23,25 +23,23 @@ class ItemController extends Controller
 
             $this->validate($request, [
             'title' => 'required|max:20',
-            'author' => 'required|max:20',
-            'publisher' => 'required|max:20',
             'genre' => 'required|max:20',
+            'time' => 'required|max:20',
             'introduction' =>'required|max:200',
-            'image' =>'required|max:64|mimes:jpg,jpeg,png',
+            'material' =>'required|max:200',
+            'image' =>'max:64|mimes:jpg,jpeg,png',
             'price' => 'required|integer|min:1',
-            'inventory' => 'required|integer|min:0',
             ]);
 
         $item = new Item();
 
         $item->title = $request->title;
-        $item->author = $request->author;
-        $item->publisher = $request->publisher;
         $item->genre = $request->genre;
+        $item->time = $request->time;
         $item->introduction = $request->introduction;
+        $item->material = $request->material;
         $item->image = base64_encode(file_get_contents($request->image));
         $item->price = $request->price;
-        $item->inventory = $request->inventory;
         $item->save();
     
         return redirect('/item');
@@ -55,29 +53,27 @@ class ItemController extends Controller
 
         $this->validate($request, [
             'title' => 'required|max:20',
-            'author' => 'required|max:20',
-            'publisher' => 'required|max:20',
             'genre' => 'required|max:20',
+            'time' => 'required|max:20',
             'introduction' =>'required|max:200',
+            'material' =>'required|max:200',
             'image' =>'max:64|mimes:jpg,jpeg,png',
             'price' => 'required|integer|min:1',
-            'inventory' => 'required|integer|min:0',
             ]);
 
         $item = Item::find($id);
 
         $item->title = $request->title;
-        $item->author = $request->author;
-        $item->publisher = $request->publisher;
         $item->genre = $request->genre;
+        $item->time = $request->time;
         $item->introduction = $request->introduction;
+        $item->material = $request->material;
 
         if (isset($request->image)){
             $item->image = base64_encode(file_get_contents($request->image));
         }
 
         $item->price = $request->price;
-        $item->inventory = $request->inventory;
         $item->save();
 
         return redirect('/item');

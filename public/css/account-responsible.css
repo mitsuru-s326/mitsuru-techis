@@ -40,7 +40,7 @@
         /* margin: 2%; */
         border: solid 0px;      /* 枠線指定 */
         background-color:rgb(255, 255, 255);/*背景色指定*/
-        background-image: url(toshokan2.jpg);    /* 背景画像指定 */
+        background-image: url("../ryouri.jpg");    /* 背景画像指定 */
         /* background-position: 50%  50%; */
         background-repeat: round; /* 背景画像の繰り返しを解除 */
         background-size: contain;

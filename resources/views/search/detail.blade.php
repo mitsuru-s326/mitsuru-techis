@@ -46,3 +46,10 @@
     </div>
 
 </div>
+
+<!-- <li><b>料理名：{{$item->title}}</b></li>
+<li>ジャンル：{{$item->genre}}</li>
+<li>料理時間：{{$item->time}}</li>
+<li><p>料理の説明：{{$item->introduction}}</P></li>
+<li><p>料理の主な材料：{{$item->material}}</P></li>
+<li>材料費：{{number_format($item->price)}}円</li> -->

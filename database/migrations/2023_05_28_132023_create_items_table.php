@@ -16,14 +16,13 @@ class CreateItemsTable extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
             $table->string("status", 100)->default('active');
-            $table->string('title',100);
-            $table->string('author', 100);
-            $table->string('publisher', 100);
+            $table->string('title',100)->unique();
             $table->string('genre', 100);
+            $table->string('time', 100);
             $table->text('introduction');
+            $table->string('material', 100);
             $table->text('image');
             $table->integer('price')->length(8)->default(0);
-            $table->integer('inventory')->length(8)->default(0);
             $table->timestamps();
         });
     }
