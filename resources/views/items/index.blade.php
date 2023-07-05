@@ -22,7 +22,11 @@
         <div class ="index-book-information">
         
           <div class="index-book-image">
+          @if(is_null($item->image))
+          <img src="../../../../gazounashi.jpeg" alt="image">
+          @else 
             <img src="data:image/png;base64,{{$item->image}}" alt="image">
+          @endif
           </div>
           
           <div class="index-book-details">

@@ -9,7 +9,7 @@ use App\Models\User;
 
 class ItemController extends Controller
 {
-    
+
     public function GetIndex(Request $request)
     {
         // 商品一覧を取得する関数
@@ -21,15 +21,15 @@ class ItemController extends Controller
     {
         //  新しい本の情報を登録する関数
 
-            $this->validate($request, [
+        $this->validate($request, [
             'title' => 'required|max:20',
             'genre' => 'required|max:20',
             'time' => 'required|max:20',
-            'introduction' =>'required|max:200',
-            'material' =>'required|max:200',
-            'image' =>'max:64|mimes:jpg,jpeg,png',
+            'introduction' => 'required|max:200',
+            'material' => 'required|max:200',
+            'image' => 'nullable|max:64|mimes:jpg,jpeg,png',
             'price' => 'required|integer|min:1',
-            ]);
+        ]);
 
         $item = new Item();
 
@@ -38,28 +38,30 @@ class ItemController extends Controller
         $item->time = $request->time;
         $item->introduction = $request->introduction;
         $item->material = $request->material;
-        $item->image = base64_encode(file_get_contents($request->image));
+        if ($request->hasFile('image')) {
+            $item->image = base64_encode(file_get_contents($request->image));
+        }
         $item->price = $request->price;
         $item->save();
-    
+
         return redirect('/item');
     }
-    
+
     public function UpdateItem(Request $request, $id)
     {
         // 編集対象の本の情報を登録する関数
-       
+
         // dd($request->image ?? true);
 
         $this->validate($request, [
             'title' => 'required|max:20',
             'genre' => 'required|max:20',
             'time' => 'required|max:20',
-            'introduction' =>'required|max:200',
-            'material' =>'required|max:200',
-            'image' =>'max:64|mimes:jpg,jpeg,png',
+            'introduction' => 'required|max:200',
+            'material' => 'required|max:200',
+            'image' => 'max:64|mimes:jpg,jpeg,png',
             'price' => 'required|integer|min:1',
-            ]);
+        ]);
 
         $item = Item::find($id);
 
@@ -69,7 +71,7 @@ class ItemController extends Controller
         $item->introduction = $request->introduction;
         $item->material = $request->material;
 
-        if (isset($request->image)){
+        if (isset($request->image)) {
             $item->image = base64_encode(file_get_contents($request->image));
         }
 
@@ -77,7 +79,7 @@ class ItemController extends Controller
         $item->save();
 
         return redirect('/item');
-        }
+    }
 
     public function GetUpdateItem(Request $request, $id)
     {
@@ -95,5 +97,5 @@ class ItemController extends Controller
         $item->save();
         return redirect('/item');
     }
-   
+
 }

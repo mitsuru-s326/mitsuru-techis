@@ -28,7 +28,9 @@
         </div>
         <div class="content-wrapper">
             <h1>献立のホーム画面へようこそ</h1>
+            @can('admin')
             <h2>この献立システムは毎日の夕食メニューを管理するためのシステムです</h2>
+            @endcan
         </div>
         <div class="user-wrapper">
             <div class="user-btn">

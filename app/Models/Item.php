@@ -17,6 +17,7 @@ class Item extends Model
         'introduction',
         'material',
         'price',
+        'recipe',
         'image',
     ];
 
