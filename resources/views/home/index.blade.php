@@ -15,11 +15,11 @@
                     <a class="button" href="/search">献立</a>
                  </li>
                 <li class="list-1">
-                    <a class="button" href="/search">メニュー一覧</a>
+                    <a class="button" href="/search">料理一覧</a>
                  </li>
                 @if(session("is_admin")==1) 
                 <li class="list-2">
-                    <a class="button2" href="/item">メニュー管理</a>
+                    <a class="button2" href="/item">料理管理</a>
                 </li>
                 <li class="list-3">
                      <a class="button3" href="/list">アカウント一覧</a>

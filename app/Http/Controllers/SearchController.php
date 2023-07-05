@@ -16,7 +16,7 @@ class SearchController extends Controller
         if(!empty($keyword)) {
             $query->where('status', 'active')->get();
             $query->where('title', 'LIKE', "%{$keyword}%")
-                ->orWhere('author', 'LIKE', "%{$keyword}%");
+                ->orWhere('genre', 'LIKE', "%{$keyword}%");
         }
         $items = $query->where('status', 'active')->get();
         return view('search.index')->with('items', $items)->with('keyword', $keyword);

@@ -38,7 +38,7 @@
       <td>{{ $user->nick_name }}</td>
       <td>{{ $user->email }}</td>
       <td>{{ $user->created_at }}</td>
-      <td class="list"><a style= color:green href="edit/{{ $user->id }}" target="_blank">編集</a></td>
+      <td><a style= color:green href="edit/{{ $user->id }}" target="_blank">編集</a></td>
     </tr>
     @endforeach
   </tbody>

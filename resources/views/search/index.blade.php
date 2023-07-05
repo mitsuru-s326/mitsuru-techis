@@ -3,7 +3,7 @@
 <div class="container">
 
 <div class="header">
-<h1 class="text-center">一覧画面</h1>
+<h1 class="text-center">料理一覧画面</h1>
 <a class="btn btn-outline-secondary" href="/home">ホーム画面に戻る</a>
 </div>
 
@@ -32,27 +32,31 @@
     <hr>
     </div>
 
-    <div class="all-list">
-        <table class="table">
-            <tbody>
-                @foreach ($items as $item)
-                <tr>
-                    <td class="image"><img src="data:image/png;base64,{{$item->image}}"></td>
-                    <td>
-                        <li class="title"><a href="/search/detail/{{ $item->id }}">{{$item->title}}</a></li>
-                        <li>
-                        著者：{{$item->author}}
-                        </li>
-                        <li>
-                        出版社：{{$item->publisher}}
-                        </li>
-                        <li>
-                        ジャンル：{{$item->genre}}
-                        </li>
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
+<!-- <div class="all-list"> -->
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">料理名</th>
+            <th scope="col">ジャンル</th>
+            <th scope="col">料理の説明</th>
+            <th scope="col">料理時間</th>
+            <th scope="col">作り方</th>
+            <th scope="col">料理編集へ</th>
+        </tr>
+        </thead>
+    <tbody>
+        @foreach ($items as $item)
+        <tr>
+            <th scope="row"><a href="/search/detail/{{ $item->id }}">{{$item->title}}</a></th>
+            <td>{{$item->genre}}</td>
+            <td>{{$item->introduction}}</td>
+            <td>{{$item->time}} 分</td>
+            <td><a href="{{ $item->recipe }}">{{ $item->recipe }}</a></td>
+            <td><a href="/search/detail/{{ $item->id }}">編集</a></td>
+        </tr> 
+        @endforeach
+            
+        </tbody>
         </table>
     </div>
 </div>
