@@ -101,6 +101,16 @@
                 </div>
 
                 <div>
+                    <p>料理のレシピサイト（URL）</p>
+                    <p class="book-introduction"><input class="form-control" type="text" name="recipe" value="{{$item->recipe}}" maxlength="200" required></p>
+                    @if($errors->has('recipe'))
+                            @foreach($errors->get('recipe') as $message)
+                            <div class ="error-display">{{ $message }}</div>
+                            @endforeach
+                    @endif
+                </div>
+
+                <div>
                     <p>画像のアップロード</p>
                     <input class="form-control" type="file" name="image" accept="image/jpg, image/jpeg, image/png">
                         @if($errors->has('image'))

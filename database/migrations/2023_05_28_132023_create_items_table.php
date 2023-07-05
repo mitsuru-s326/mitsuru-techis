@@ -23,6 +23,7 @@ class CreateItemsTable extends Migration
             $table->string('material', 100);
             $table->text('image')-> nullable();
             $table->integer('price')->length(8)->default(0);
+            $table->string('recipe',100);
             $table->timestamps();
         });
     }

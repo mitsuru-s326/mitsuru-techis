@@ -48,6 +48,8 @@
                 <input class="form-control" type="text" name="material" placeholder="料理の材料を200文字以内で分かりやすく説明して下さい。" maxlength="200" required>
                 <p>材料費 (円)</p>
                 <input class="form-control" type="number" name="price" placeholder="1以上の整数を半角で記載して下さい" min="1" required>
+                <p>レシピサイト（URL）</p>
+                <input class="form-control" type="text" name="recipe" placeholder="料理のレシピサイト（URL）を入力して下さい" maxlength="200" required>
                 <p>画像のアップロード</p>
                 <input class="form-control" type="file" name="image" accept="image/jpg, image/jpeg, image/png"> 
                 <br>

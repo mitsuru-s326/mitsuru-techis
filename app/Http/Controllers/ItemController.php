@@ -19,7 +19,7 @@ class ItemController extends Controller
 
     public function RegisterItem(Request $request)
     {
-        //  新しい本の情報を登録する関数
+        //  新しい料理の情報を登録する関数
 
         $this->validate($request, [
             'title' => 'required|max:20',
@@ -29,6 +29,7 @@ class ItemController extends Controller
             'material' => 'required|max:200',
             'image' => 'nullable|max:64|mimes:jpg,jpeg,png',
             'price' => 'required|integer|min:1',
+            'recipe'=> 'required|max:200',
         ]);
 
         $item = new Item();
@@ -42,6 +43,7 @@ class ItemController extends Controller
             $item->image = base64_encode(file_get_contents($request->image));
         }
         $item->price = $request->price;
+        $item->recipe = $request->recipe;
         $item->save();
 
         return redirect('/item');
@@ -49,7 +51,7 @@ class ItemController extends Controller
 
     public function UpdateItem(Request $request, $id)
     {
-        // 編集対象の本の情報を登録する関数
+        // 編集対象の料理の情報を登録する関数
 
         // dd($request->image ?? true);
 
@@ -61,6 +63,7 @@ class ItemController extends Controller
             'material' => 'required|max:200',
             'image' => 'max:64|mimes:jpg,jpeg,png',
             'price' => 'required|integer|min:1',
+            'recipe'=> 'required|max:200',
         ]);
 
         $item = Item::find($id);
@@ -76,6 +79,8 @@ class ItemController extends Controller
         }
 
         $item->price = $request->price;
+        $item->recipe = $request->recipe;
+
         $item->save();
 
         return redirect('/item');
