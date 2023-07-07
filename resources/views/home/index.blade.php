@@ -3,41 +3,52 @@
     <title>ホーム画面</title>
 </head>
 <body>
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+     <a class="navbar-brand" href="#">{{ $user->nick_name }}さんの献立</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav4" aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav4">
+          <ul class="navbar-nav">
+              <li class="nav-item active">
+                  <a class="nav-link" href="/search">献立一覧<span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/search">料理一覧</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/item">料理管理</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/list">アカウント一覧</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" href="/logout">ログアウト</a>
+             </li>
+         </ul>
+     </div>
+</nav>
 <div class="container">
-            <h2>献立のホーム画面へようこそ<br>この献立システムは毎日の夕食メニューを管理するためのシステムです</h2>     
-            <div class="form-group">
-                <a class="btn btn-success" href="/logout">ログアウト</a>
-            </div>
+            <h2>献立のホーム画面へようこそ<br>この献立システムは毎日の夕食メニューを管理するためのシステムです<br>
+            @foreach ($user->items as $item)
+    {{ $item->title}}
+    {{ $item->recipe}}
+    @endforeach
+    
+    
+</h2>     
             
         
 
-    <div class="main-wrapper">
-    <div class="content-wrapper">
-    <h4>{{ $user->nick_name }}さんの献立</h4>
-    @foreach ($user->items as $item)
-    <h4>{{ $item->title}}</h4>
-    <h4>{{ $item->recipe}}</h4>
-    @endforeach
-
     
-</div>
-        <div class="btn-wrapper">
-            <li class="list-1">
-                    <a class="button" href="/search">献立一覧</a>
-                 </li>
-                <li class="list-1">
-                    <a class="button" href="/search">料理一覧</a>
-                 </li>
-                @if(session("is_admin")==1) 
-                <li class="list-1">
-                    <a class="button" href="/item">料理管理</a>
-                </li>
-                <li class="list-1">
-                     <a class="button" href="/list">アカウント一覧</a>
-                </li>
-                @endif
-        </div>
-        </div>
+    <div class="header-left">
+        <img class="header-logo" src="../../../../nabe.jpeg" alt="nabe">
     </div>
+    
+    @foreach ($user->items as $item)
+    {{ $item->title}}
+    {{ $item->recipe}}
+    @endforeach
 </body>
 </html>

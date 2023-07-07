@@ -1,4 +1,4 @@
-@include('account.common')
+@include('search.app')
 <head>
     <title>料理編集・削除画面</title>
 </head>
@@ -6,7 +6,7 @@
 <div class="container">
 
     <div class="header">
-        <h1 class="text-center">詳細画面</h1>
+        <h1 class="text-center">料理の説明</h1>
     </div>
 
     <!-- 詳細画面 -->
@@ -15,22 +15,29 @@
         <table>
             <tbody>
                 <tr>
-                    <td class="image"><img src="data:image/png;base64,{{$item->image}}"></td>
+                    <td class="image">
+                    @if(is_null($item->image))
+                        <img src="../../../../gazounashi.jpeg" alt="image">
+                    @else 
+                        <img src="data:image/png;base64,{{$item->image}}">
+                    @endif
+                    </td>
                     <td>
                         <li class="title">{{$item->title}}</li>
                         <br>
                         <li>
-                            著者　　：{{$item->author}}
+                            ジャンル：{{$item->genre}}
                         </li>
                         <li>
-                            出版社　：{{$item->publisher}}
+                            料理時間：{{$item->time}}分
                         </li>
                         <li>
-                            ジャンル　：{{$item->genre}}
+                            作り方　：{{$item->url}}
                         </li>
-                        <br>
                         <li>
-                            価格：{{$item->price}}円　/　在庫数：{{$item->inventory}}冊
+                            主な材料：{{$item->material}}
+                        <li>
+                            材料費　：{{$item->price}}円
                         </li>
                     </td>
                 </tr>
@@ -38,7 +45,7 @@
                     <td></td>
                     <td class="introduction">
                         <li class="introduction">
-                            概要
+                            料理の説明：
                             <hr>
                             {{$item->introduction}}
                         </li>

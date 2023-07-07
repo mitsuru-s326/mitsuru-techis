@@ -1,4 +1,4 @@
-@include('account.common')
+@include('items.common')
 
 <head>
     <title>料理編集・削除画面</title>

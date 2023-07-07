@@ -17,11 +17,6 @@ h2 {
     background-image: linear-gradient(to left, #9be15d 0%, #00e3ae 100%);
   }
 
-  h4 {
-    text-align:right;
-    padding: 1rem 3rem;
-    color: #000;
-  }
   
 .lavelColor{
     text-align:center;
@@ -79,7 +74,49 @@ h2 {
    color:aliceblue;
 }
 
-.li{
+.header-logo{
+    height:60px;
+    margin-top:auto;
+}
+
+/* .header {
+height: 60px;
+width: 100%;
+box-shadow: 0 0 10px #dddddd;
+background-color: white;    
+position: fixed;
+}
+
+.header-left {
+float: left;
+}
+
+.header-right {
+float: right;
+}
+
+.clear {
+clear:both;
+}
+
+.header-right a {
+    line-height: 60px;
+    color:#9be15d;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: x-large;
+}
+
+.header-right a:hover{
+    background-color: rgb(198, 236, 236);
+}
+.container{
+    max-width: 1200px;
+    padding:0 30px ;
+    margin-left: auto;
+    margin-right: auto;
+} */
+/* .li{
     list-style-type: none;
     border: solid black 1px;
     width: 100%;
@@ -131,4 +168,4 @@ h2 {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-}
+} */

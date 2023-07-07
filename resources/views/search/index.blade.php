@@ -1,6 +1,6 @@
 @include('account.common')
 <head>
-    <title>料理編集・削除画面</title>
+    <title>料理一覧画面</title>
 </head>
 <div class="container">
 
@@ -60,7 +60,7 @@
             <td>{{$item->introduction}}</td>
             <td>{{$item->time}} 分</td>
             <td><a href="{{ $item->recipe }}">{{ $item->recipe }}</a></td>
-            <td><a href="/search/detail/{{ $item->id }}">編集</a></td>
+            <td><a href="/item/edit/{{$item->id}}">編集</a></td>
             <td><button type="submit" name="item_id" value="{{$item->id}}" >
             @if($user->items->contains($item->id))
             献立から削除
