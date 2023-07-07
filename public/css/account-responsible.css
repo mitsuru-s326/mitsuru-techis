@@ -11,20 +11,6 @@
         background-image: -webkit-linear-gradient(right, #9be15d 0%, #00e3ae 100%);
         background-image: linear-gradient(to left, #9be15d 0%, #00e3ae 100%);
       }
-      
-    
-    
-    /* .text1{
-        text-align: left;
-        width: 10em;
-    }
-    
-    .sukima{
-        margin: 0.1em;
-    } */
-    /* .table {
-        display:  inline-block;
-    } */
 
     .bg_test-text {
         border:  solid 3px;                             /* 枠線指定 */
@@ -58,8 +44,6 @@
         text-align: center;
         font-size: large;
         background-color: green;
-        
-    
     }
     
     .a{

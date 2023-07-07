@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Item;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class ItemController extends Controller
 {
@@ -101,6 +102,20 @@ class ItemController extends Controller
         $item->status = 'delete';
         $item->save();
         return redirect('/item');
+    }
+    public function Menu(Request $request)
+    {
+        // 献立を登録する関数
+        $itemId = $request ->get('item_id');
+        $user = User::find(session("id"));
+        if($user->items->contains($itemId)){
+            $user->items()->detach($itemId);
+        }else{
+            $user->items()->attach($itemId);
+        }
+        return redirect('/search');
+    
+        
     }
 
 }

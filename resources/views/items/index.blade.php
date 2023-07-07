@@ -37,6 +37,8 @@
             <li><p>料理のレシピ：<a href="{{ $item->recipe }}">{{ $item->recipe }}</a></p></li>
             <!-- <li><p>料理の主な材料：{{$item->material}}</P></li>
             <li>材料費：{{number_format($item->price)}}円</li> -->
+
+            
             <li><button type="sumbit"><a href="/item/edit/{{$item->id}}">料理編集画面へ</a></button></li>
             <li><button type="sumbit"><a href="/item/edit/delete/{{$item->id}}">料理削除</a></button></li>
           </div>

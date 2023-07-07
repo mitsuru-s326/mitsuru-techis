@@ -1,5 +1,7 @@
-@extends('search.app')
-
+@include('account.common')
+<head>
+    <title>料理編集・削除画面</title>
+</head>
 <div class="container">
 
 <div class="header">
@@ -32,6 +34,11 @@
     <hr>
     </div>
 
+    <form action="{{url('menu')}}" method="POST" class="" >
+        {{ csrf_field() }}
+       
+   
+
 <!-- <div class="all-list"> -->
     <table class="table">
         <thead>
@@ -42,6 +49,7 @@
             <th scope="col">料理時間</th>
             <th scope="col">作り方</th>
             <th scope="col">料理編集へ</th>
+            <th scope="col">献立へ登録</th>
         </tr>
         </thead>
     <tbody>
@@ -53,11 +61,19 @@
             <td>{{$item->time}} 分</td>
             <td><a href="{{ $item->recipe }}">{{ $item->recipe }}</a></td>
             <td><a href="/search/detail/{{ $item->id }}">編集</a></td>
+            <td><button type="submit" name="item_id" value="{{$item->id}}" >
+            @if($user->items->contains($item->id))
+            献立から削除
+            @else
+            献立へ登録
+            @endif
+            </button><td>
         </tr> 
         @endforeach
             
         </tbody>
         </table>
+        </form>
     </div>
 </div>
 

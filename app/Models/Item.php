@@ -21,4 +21,7 @@ class Item extends Model
         'image',
     ];
 
+    public function users(){
+        return $this->belongsToMany(User::class);
+    }
 }

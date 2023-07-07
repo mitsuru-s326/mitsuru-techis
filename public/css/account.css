@@ -16,9 +16,13 @@ h2 {
     background-image: -webkit-linear-gradient(right, #9be15d 0%, #00e3ae 100%);
     background-image: linear-gradient(to left, #9be15d 0%, #00e3ae 100%);
   }
+
+  h4 {
+    text-align:right;
+    padding: 1rem 3rem;
+    color: #000;
+  }
   
-
-
 .lavelColor{
     text-align:center;
     font-size: large;
@@ -69,10 +73,62 @@ h2 {
     text-align: center;
     font-size: large;
     background-color: green;
-    
-
 }
 
 .a{
    color:aliceblue;
+}
+
+.li{
+    list-style-type: none;
+    border: solid black 1px;
+    width: 100%;
+}
+
+.list-1 {
+    background: greenyellow;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+}
+
+.button{
+    display: block;
+    font-size: 120%;
+    border: none;
+    text-align: center;
+}
+
+.user-btn{
+    border: solid black 1px;
+    background-color: #d8d8d8;
+    width: 70%;
+    height: 20px;
+    margin: 10px;
+}
+
+.button:hover{
+    color: aliceblue;
+}
+
+.main-wrapper {
+    border: 1px solid;
+    height: auto;
+    display: flex;
+}
+
+.btn-wrapper {
+    width: 15%;
+    border: 1px solid;
+    position: fixed;
+}
+
+.content-wrapper {
+    width: 70%;
+    background-image: url("../ryouri.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
