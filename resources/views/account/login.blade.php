@@ -45,7 +45,7 @@
         <!-- ログインボタン -->
         <div class="form-group">
         <br>
-                <button type="submit" class="btn btn-success">ログイン</button>
+                <button type="submit" class="btn btn-Dark">ログイン</button>
         </div>
        </form>
     <p>{{ session("message") }}</p>

@@ -3,13 +3,13 @@
     <title>料理一覧画面</title>
 </head>
 <div class="container">
-
-<div class="header">
-<h1 class="text-center">料理一覧画面</h1>
+<h2>料理一覧画面</h2>
+<div class="list">
 <a class="btn btn-outline-secondary" href="/home">ホーム画面に戻る</a>
 </div>
 
 <!-- 検索機能 -->
+<div class = list>
 <div class="search-form">
     <form class="row g-2" action="{{ url('/search') }}" method="GET">
         @csrf
@@ -17,9 +17,10 @@
         <input class="form-control" type="text" name="keyword" value="{{$keyword}}">
         </div>
         <div class="col-auto">
-        <input class="btn btn-success" type="submit" value="検索">
+        <input class="btn btn-Dark" type="submit" value="検索">
         </div>
     </form>
+</div>
 </div>
 
 <!-- 一覧表示・検索結果表示 -->
@@ -37,9 +38,6 @@
     <form action="{{url('menu')}}" method="POST" class="" >
         {{ csrf_field() }}
        
-   
-
-<!-- <div class="all-list"> -->
     <table class="table">
         <thead>
         <tr>

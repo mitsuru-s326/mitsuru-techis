@@ -3,14 +3,27 @@
 
     /* タイトルのCSS */
     h2 {
+        font-size:1.5em;
         text-align:center;
         padding: 1rem 3rem;
         color: #fff;
-        border-radius: 0vh;
-        background-image: -webkit-gradient(linear, right top, left top, from(#9be15d), to(#00e3ae));
-        background-image: -webkit-linear-gradient(right, #9be15d 0%, #00e3ae 100%);
-        background-image: linear-gradient(to left, #9be15d 0%, #00e3ae 100%);
+        /* border-radius: 100vh; */
+        background-image: -webkit-linear-gradient(right, #c5d0bb 0%, #262a29 100%);
+        background-image: linear-gradient(to left, #4b4f48 0%, #c1d8d3 100%);
       }
+    h3 {
+        font-size:2em;
+        text-align:center;
+        line-height:0.95em;
+        font-weight:bold;
+        color: transparent;
+        background : rgba(0,0,0,1);
+        text-shadow : 
+            0 0 0.1em rgba(255,255,255,0.05),
+            0.01em 0.04em 0.03em rgba(255,255,255,0.4);
+        -webkit-background-clip : text;
+    
+    }
 
     .bg_test-text {
         border:  solid 3px;                             /* 枠線指定 */
@@ -36,14 +49,14 @@
 
     .list {
         text-align: center;
-        color: rgb(39, 77, 6);
+        color: rgb(11, 22, 2);
     }
     
     .user_register{
         
         text-align: center;
         font-size: large;
-        background-color: green;
+        background-color: rgb(39, 41, 39);
     }
     
     .a{

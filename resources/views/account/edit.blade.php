@@ -50,7 +50,7 @@
 
         <!-- アカウント変更ボタン -->
         <div class="form-group">
-            <button type="submit" class="btn btn-success">アカウント情報変更</button>
+            <button type="submit" class="btn btn-Dark">アカウント情報変更</button>
         </div>       
     </form>
 
@@ -60,7 +60,7 @@
 
 <div>
     <input type="hidden" name="id" value="{{$user ->id}}">
-    <button type="submit" class="btn btn-success">アカウント情報削除</button>
+    <button type="submit" class="btn btn-Dark">アカウント情報削除</button>
 </div>
 
 </form>

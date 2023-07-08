@@ -12,7 +12,7 @@
 
 <div class="bg_test-text">
   <div class="user_register">
-      <a style=color:white;  style= font-weight:400 href="toroku" target="_blank">>>アカウント登録画面へ</a>
+      <a style=color:white; href="toroku" target="_blank">>>アカウント登録画面へ</a>
   </div>
 
 
@@ -38,7 +38,7 @@
       <td>{{ $user->nick_name }}</td>
       <td>{{ $user->email }}</td>
       <td>{{ $user->created_at }}</td>
-      <td><a style= color:green href="edit/{{ $user->id }}" target="_blank">編集</a></td>
+      <td><a style= color:black href="edit/{{ $user->id }}" target="_blank">編集</a></td>
     </tr>
     @endforeach
   </tbody>
@@ -49,12 +49,12 @@
 <!-- <ホーム画面へのボタン>     -->
 <form action="/home" method="GET">
                     {{ csrf_field() }}
-    <button type="submit" class="btn btn-success">ホーム画面</button>
+    <button type="submit" class="btn btn-Dark">ホーム画面</button>
   </form>
 <!-- <アカウントログアウトボタン>     -->
 <form action="/logout" method="GET">
                     {{ csrf_field() }}
-    <button type="submit" class="btn btn-success">ログアウト</button>
+    <button type="submit" class="btn btn-Dark">ログアウト</button>
   </form>
 </div> 
       

@@ -1,4 +1,4 @@
-@include('search.app')
+@include('account.common')
 <head>
     <title>料理編集・削除画面</title>
 </head>
@@ -6,7 +6,7 @@
 <div class="container">
 
     <div class="header">
-        <h1 class="text-center">料理の説明</h1>
+        <h2>料理の詳細</h2>
     </div>
 
     <!-- 詳細画面 -->

@@ -64,7 +64,7 @@
 
         <!-- ユーザー追加ボタン -->
         <div class="form-group">
-                <button type="submit" class="btn btn-success" onclick="location.href='login'">アカウント登録</button>
+                <button type="submit" class="btn btn-Dark" onclick="location.href='login'">アカウント登録</button>
         </div>
        
     </form>

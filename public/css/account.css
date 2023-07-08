@@ -11,20 +11,32 @@ h2 {
     text-align:center;
     padding: 1rem 3rem;
     color: #fff;
-    border-radius: 100vh;
-    background-image: -webkit-gradient(linear, right top, left top, from(#9be15d), to(#00e3ae));
-    background-image: -webkit-linear-gradient(right, #9be15d 0%, #00e3ae 100%);
-    background-image: linear-gradient(to left, #9be15d 0%, #00e3ae 100%);
+    /* border-radius: 100vh; */
+    background-image: -webkit-linear-gradient(right, #c5d0bb 0%, #262a29 100%);
+    background-image: linear-gradient(to left, #4b4f48 0%, #c1d8d3 100%);
   }
+h3 {
+    font-size:3em;
+	text-align:center;
+	line-height:0.95em;
+	font-weight:bold;
+	color: transparent;
+	background : rgba(0,0,0,1);
+	text-shadow : 
+		0 0 0.1em rgba(255,255,255,0.05),
+		0.01em 0.04em 0.03em rgba(255,255,255,0.4);
+	-webkit-background-clip : text;
+
+}
 
   
 .lavelColor{
     text-align:center;
     font-size: large;
-    color:green;
-    border: solid 3px green;/*線色*/
+    color:rgb(3, 3, 3);
+    border: solid 3px rgb(26, 27, 26);/*線色*/
     padding: 0.1em;/*文字周りの余白*/
-    border-radius: 0.5em;/*角丸*/
+    /* border-radius: 0.5em;角丸 */
     width: auto;
 }
 
@@ -55,19 +67,19 @@ h2 {
     /* background-position: 50%  50%; */
     background-repeat: repeat; /* 背景画像の繰り返しを解除 */
     background-size: contain;
-    border-radius: 10%;/*角丸*/
+    /* border-radius: 10%;角丸 */
 }
 
 .list {
     text-align: center;
-    color: rgb(39, 77, 6);
+    color: rgb(11, 22, 2);
 }
 
 .user_register{
     
     text-align: center;
     font-size: large;
-    background-color: green;
+    background-color: rgb(39, 41, 39);
 }
 
 .a{
@@ -77,6 +89,104 @@ h2 {
 .header-logo{
     height:60px;
     margin-top:auto;
+}
+
+.detail-list hr {
+    /* margin-left: 40px; */
+    margin-bottom: 20px;
+    color: green;
+}
+
+.detail-list {
+    display: flex;
+}
+
+.detail-list table {
+    width: 850px;
+    table-layout: fixed;
+    margin-top: 30px;
+}
+
+.detail-list li {
+    list-style: none;
+    font-size: 1.5em;
+    /* border-bottom: solid 0.5px gray; */
+    margin: 8px 0px 15px 40px;
+}
+
+.detail-list li.title {
+    font-size: 2.2em;
+}
+
+.detail-list li.introduction{
+    margin-top: 25px;
+    /* color: green; */
+}
+
+.detail-list td {
+    height: 350px;
+}
+
+.detail-list td.image {
+    width: 350px;
+    /* outline: solid 0.5px lightgray; */
+    /* outline-offset: -20px; */
+    text-align: center;
+}
+
+.detail-list td.introduction {
+    vertical-align: top;
+    word-wrap: break-word;
+}
+
+.detail-list img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: top;
+    /* border-radius: 0.25rem; */
+}
+
+.search-form {
+    float: right;
+    margin: 15px 0px 0px;
+}
+
+.list-form {
+    clear: both;
+}
+
+.all-list {
+    display: flex;
+}
+
+.all-list li {
+    list-style: none;
+    font-size: 1.2em;
+    margin: 8px 0px 15px;
+}
+
+.all-list li.title {
+    font-size: 2em;
+}
+
+.all-list td {
+    height: 250px;
+    padding: 19px 20px;
+}
+
+.all-list td.image {
+    width: 25%;
+    /* outline: solid 0.5px lightgray; */
+    /* outline-offset: -20px; */
+    text-align: center;
+}
+
+.all-list img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    /* border-radius: 0.25rem; */
 }
 
 /* .header {

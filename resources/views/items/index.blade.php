@@ -5,9 +5,8 @@
 </head>
 
 <body class="text-center">
-    
   <header>
-    <h1>料理管理画面（管理者用一覧）</h1>
+    <h2>料理管理画面（管理者用一覧）</h2>
     <div>
       <button class="w-200 btn btn-lg"><a href="/item/registration">料理登録画面へ</a></button>
       <button class="w-200 btn btn-lg"><a href="/home">ホーム画面へ戻る</a></button>
