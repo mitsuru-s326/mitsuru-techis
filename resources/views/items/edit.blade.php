@@ -56,12 +56,12 @@
                 <div>
                     <p>料理時間</p>
                     <select class="form-control" name="time" value="{{$item->genre}}" maxlength="20" required>
-                    <option value ="10">約10分</option>
-                    <option value ="20">約20分</option>
-                    <option value ="30">約30分</option>
-                    <option value ="40">約40分</option>
-                    <option value ="50">約50分</option>
-                    <option value ="60">約60分</option>
+                    <option value ="10分">約10分</option>
+                    <option value ="20分">約20分</option>
+                    <option value ="30分">約30分</option>
+                    <option value ="40分">約40分</option>
+                    <option value ="50分">約50分</option>
+                    <option value ="60分">約60分</option>
                     </select>
                         @if($errors->has('time'))
                             @foreach($errors->get('time') as $message)

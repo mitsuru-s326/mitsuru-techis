@@ -43,10 +43,12 @@
         <tr>
             <th scope="col">料理名</th>
             <th scope="col">ジャンル</th>
-            <th scope="col">料理の説明</th>
             <th scope="col">料理時間</th>
             <th scope="col">作り方</th>
+            <th scope="col">登録者</th>
+            @if(session("is_admin")==1) 
             <th scope="col">料理編集へ</th>
+            @endif
             <th scope="col">献立へ登録</th>
         </tr>
         </thead>
@@ -55,15 +57,17 @@
         <tr>
             <th scope="row"><a href="/search/detail/{{ $item->id }}">{{$item->title}}</a></th>
             <td>{{$item->genre}}</td>
-            <td>{{$item->introduction}}</td>
             <td>{{$item->time}} 分</td>
-            <td><a href="{{ $item->recipe }}">{{ $item->recipe }}</a></td>
+            <td><a href="{{ $item->recipe }}">作り方のURLページへ</a></td>
+            <td>{{$item->user}} </td>
+            @if(session("is_admin")==1) 
             <td><a href="/item/edit/{{$item->id}}">編集</a></td>
+            @endif
             <td><button type="submit" name="item_id" value="{{$item->id}}" >
             @if($user->items->contains($item->id))
-            献立から削除
+            <a style= background:red > 献立から削除</a>
             @else
-            献立へ登録
+            <a style= background:yellow > 献立へ登録</a>
             @endif
             </button><td>
         </tr> 

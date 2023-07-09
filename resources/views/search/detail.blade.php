@@ -9,6 +9,16 @@
         <h2>料理の詳細</h2>
     </div>
 
+    <div class="list">
+        <a class="btn btn-outline-secondary" href="/home">ホーム画面に戻る</a>
+    </div>
+
+    <div class="list">
+        <a class="btn btn-outline-secondary" href="/search">料理一覧画面に戻る</a>
+    </div>
+
+    
+
     <!-- 詳細画面 -->
 
     <div class="detail-list">
@@ -23,7 +33,7 @@
                     @endif
                     </td>
                     <td>
-                        <li class="title">{{$item->title}}</li>
+                        <li class="title">料理名：{{$item->title}}</li>
                         <br>
                         <li>
                             ジャンル：{{$item->genre}}
@@ -32,12 +42,12 @@
                             料理時間：{{$item->time}}分
                         </li>
                         <li>
-                            作り方　：{{$item->url}}
+                            作り方：<a href="{{ $item->recipe }}">作り方のURLページへ</a>
                         </li>
                         <li>
                             主な材料：{{$item->material}}
                         <li>
-                            材料費　：{{$item->price}}円
+                            材料費：{{$item->price}}円
                         </li>
                     </td>
                 </tr>

@@ -12,7 +12,9 @@
       <button class="w-200 btn btn-lg"><a href="/home">ホーム画面へ戻る</a></button>
     </div>
   </header>
+  <br>
 
+  
   <br>
 
   <main>
@@ -33,7 +35,7 @@
             <li>ジャンル：{{$item->genre}}</li>
             <li>料理時間：{{$item->time}}</li>
             <li><p>料理の説明：{{$item->introduction}}</P></li>
-            <li><p>料理のレシピ：<a href="{{ $item->recipe }}">{{ $item->recipe }}</a></p></li>
+            <li><p>料理のレシピ：<a href="{{ $item->recipe }}">料理の作り方ページへ</a></p></li>
             <!-- <li><p>料理の主な材料：{{$item->material}}</P></li>
             <li>材料費：{{number_format($item->price)}}円</li> -->
 

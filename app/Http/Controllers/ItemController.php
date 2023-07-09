@@ -47,7 +47,7 @@ class ItemController extends Controller
         $item->recipe = $request->recipe;
         $item->save();
 
-        return redirect('/item');
+        return redirect('/search');
     }
 
     public function UpdateItem(Request $request, $id)

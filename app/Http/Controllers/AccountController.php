@@ -18,7 +18,18 @@ class AccountController extends Controller
         public function login(){
             return view('account.login');   
 
-    }    
+    }  
+      
+/**
+        * 献立一覧に移動する関数
+        *
+        * @param Request $request
+        * @return Response
+        */
+        public function kondate(){
+            return view('account.kondate');   
+
+       }
 
     public function list(){
 
@@ -40,6 +51,8 @@ class AccountController extends Controller
              return view('account.register');   
 
         }
+
+       
 
         // アカウント登録の関数 バリデーションでメールとパスワードにはconfirmedを入れている
 

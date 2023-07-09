@@ -58,6 +58,22 @@ use Illuminate\Support\Facades\Route;
         //献立に登録する機能
         Route::post('/menu', [App\Http\Controllers\ItemController::class, 'Menu']);
 
+         // 「商品の新規登録画面へ」ボタンがクリックされたときの遷移を取得
+         Route::get('item/registration', function () {
+            return view('items.registration');
+        });
+       
+        // // 商品登録画面
+        // 「商品新規登録画面へ」ボタンがクリックされたときの遷移を取得
+        Route::post('item/registration', [App\Http\Controllers\ItemController::class, 'RegisterItem'])->name('registration');
+
+        
+
+        // 「ホーム画面に戻る」ボタンがクリックされたときの遷移を取得
+        Route::get('item/home', [App\Http\Controllers\ItemController::class, 'ReturnHome'])->name('return');;
+
+
+
     });
 
 
@@ -69,18 +85,14 @@ use Illuminate\Support\Facades\Route;
         //アカウント一覧画面を取得
         Route::get('/list', [App\Http\Controllers\AccountController::class, 'list']);
 
-        // 商品一覧画面を表示する場合はここを通す
-        Route::get('item/', [App\Http\Controllers\ItemController::class, 'GetIndex'])->name('index');
+        //アカウントの献立一覧画面を取得
+        Route::get('/kondate', [App\Http\Controllers\AccountController::class, 'kondate']);
 
-        // 商品一覧画面
+        //料理管理画面
 
-        // 「商品の新規登録画面へ」ボタンがクリックされたときの遷移を取得
-        Route::get('item/registration', function () {
-            return view('items.registration');
-        });
-
-        // 「ホーム画面に戻る」ボタンがクリックされたときの遷移を取得
-        Route::get('item/home', [App\Http\Controllers\ItemController::class, 'ReturnHome'])->name('return');;
+        // 料理管理画面を表示する場合はここを通す
+        Route::get('item/', [App\Http\Controllers\ItemController::class, 'GetIndex'])->name('index');        
+        
 
         // 「商品の編集画面へ」ボタンがクリックされたときの遷移を取得
         Route::get('item/edit/{id}', [App\Http\Controllers\ItemController::class, 'GetUpdateItem'])->name('item');
@@ -88,10 +100,6 @@ use Illuminate\Support\Facades\Route;
         // 「削除」ボタンがクリックされたときの遷移を取得
         Route::get('item/edit/delete/{id}', [App\Http\Controllers\ItemController::class, 'DeleteItem'])->name('deletion');
 
-        // // 商品登録画面
-
-        // 「商品新規登録画面へ」ボタンがクリックされたときの遷移を取得
-        Route::post('item/registration', [App\Http\Controllers\ItemController::class, 'RegisterItem'])->name('registration');
 
         // // 商品編集画面
 

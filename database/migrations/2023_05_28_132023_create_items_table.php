@@ -19,7 +19,7 @@ class CreateItemsTable extends Migration
             $table->string('title',100)->unique();
             $table->string('genre', 100);
             $table->string('time', 100);
-            $table->text('introduction'); 
+            $table->string('introduction'); 
             $table->string('material', 100);
             $table->text('image')-> nullable();
             $table->integer('price')->length(8)->default(0);
