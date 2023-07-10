@@ -15,7 +15,8 @@ h2 {
     background-image: -webkit-linear-gradient(right, #c5d0bb 0%, #262a29 100%);
     background-image: linear-gradient(to left, #4b4f48 0%, #c1d8d3 100%);
   }
-h3 {
+  
+    h3 {
     font-size:3em;
 	text-align:center;
 	line-height:0.95em;

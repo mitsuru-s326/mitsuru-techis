@@ -20,16 +20,6 @@ class AccountController extends Controller
 
     }  
       
-/**
-        * 献立一覧に移動する関数
-        *
-        * @param Request $request
-        * @return Response
-        */
-        public function kondate(){
-            return view('account.kondate');   
-
-       }
 
     public function list(){
 

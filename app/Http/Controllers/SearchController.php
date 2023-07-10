@@ -20,6 +20,22 @@ class SearchController extends Controller
             $query->where('title', 'LIKE', "%{$keyword}%")
                 ->orWhere('genre', 'LIKE', "%{$keyword}%");
         }
+        $sort = $request->input('sort');
+        if(!empty($sort)) {
+            if ($sort=='title_up'){
+                $query->orderBy('title','ASC');
+            }
+            elseif($sort=='title_down'){
+                $query->orderBy('title','DESC');
+            }
+            elseif($sort=='genre_up'){
+                $query->orderBy('genre','ASC');
+            }
+            elseif($sort=='genre_down'){
+                $query->orderBy('genre','DESC');
+            }
+            }
+
         $items = $query->where('status', 'active')->get();
         return view('search.index')->with('items', $items)->with('keyword', $keyword)->with('user' , $user);
     }

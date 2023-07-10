@@ -15,7 +15,7 @@ class ItemController extends Controller
     {
         // 商品一覧を取得する関数
         $items = Item::where("status", "active")->latest()->paginate(6);
-        return view('items.index', ["items" => $items]);
+        return view('items.index', ["items" => $items,"keyword" => ""]);
     }
 
     public function RegisterItem(Request $request)

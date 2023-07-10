@@ -15,4 +15,6 @@
 <link rel="stylesheet" href="{{asset('css/account.css')}}">
 <!-- <独自CSSレスポンシブル> -->
 <link rel="stylesheet" href="{{asset('css/account-responsible.css')}}">
+<link href="https://unpkg.com/tabulator-tables/dist/css/tabulator.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://unpkg.com/tabulator-tables/dist/js/tabulator.min.js"></script>
 </head>

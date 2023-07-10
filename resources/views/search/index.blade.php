@@ -1,7 +1,10 @@
 @include('account.common')
 <head>
     <title>料理一覧画面</title>
+    <link href="https://unpkg.com/tabulator-tables/dist/css/tabulator.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables/dist/js/tabulator.min.js"></script>
 </head>
+
 <div class="container">
 <h2>料理一覧画面</h2>
 <div class="list">
@@ -38,16 +41,17 @@
     <form action="{{url('menu')}}" method="POST" class="" >
         {{ csrf_field() }}
        
-    <table class="table">
+    <table id= "sort_table" class="table">
         <thead>
         <tr>
-            <th scope="col">料理名</th>
-            <th scope="col">ジャンル</th>
+            <th scope="col">料理名<a href="{{ url('/search?sort=title_up') }}">↑</a> &nbsp<a href="{{ url('/search?sort=title_down') }}">↓</a></th>
+            <th scope="col">ジャンル<a href="{{ url('/search?sort=genre_up') }}">↑</a> &nbsp<a href="{{ url('/search?sort=genre_down') }}">↓</a></th>
             <th scope="col">料理時間</th>
             <th scope="col">作り方</th>
             <th scope="col">登録者</th>
             @if(session("is_admin")==1) 
-            <th scope="col">料理編集へ</th>
+            <th scope="col">料理編集</th>
+            <th scope="col">料理削除</th>
             @endif
             <th scope="col">献立へ登録</th>
         </tr>
@@ -58,10 +62,11 @@
             <th scope="row"><a href="/search/detail/{{ $item->id }}">{{$item->title}}</a></th>
             <td>{{$item->genre}}</td>
             <td>{{$item->time}} 分</td>
-            <td><a href="{{ $item->recipe }}">作り方のURLページへ</a></td>
+            <td><a href="{{ $item->recipe }}">作り方へ</a></td>
             <td>{{$item->user}} </td>
             @if(session("is_admin")==1) 
             <td><a href="/item/edit/{{$item->id}}">編集</a></td>
+            <td><a href="/item/edit/delete/{{$item->id}}">削除</a></td>
             @endif
             <td><button type="submit" name="item_id" value="{{$item->id}}" >
             @if($user->items->contains($item->id))
@@ -80,3 +85,6 @@
 </div>
 
 </div>
+<!-- <script>
+let table = new Tabulator('#sort_table', {});    
+</script> -->

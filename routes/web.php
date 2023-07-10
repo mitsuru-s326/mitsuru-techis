@@ -85,8 +85,6 @@ use Illuminate\Support\Facades\Route;
         //アカウント一覧画面を取得
         Route::get('/list', [App\Http\Controllers\AccountController::class, 'list']);
 
-        //アカウントの献立一覧画面を取得
-        Route::get('/kondate', [App\Http\Controllers\AccountController::class, 'kondate']);
 
         //料理管理画面
 
