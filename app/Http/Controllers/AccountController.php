@@ -25,7 +25,6 @@ class AccountController extends Controller
 
         //アカウント一覧、データベースに入っているものをすべて取り出して表示する関数。
         $user = User::all();
-
         return view('account.list')->with([
             'users' => $user,
         ]);

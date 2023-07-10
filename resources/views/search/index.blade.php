@@ -4,6 +4,35 @@
     <link href="https://unpkg.com/tabulator-tables/dist/css/tabulator.min.css" rel="stylesheet">
     <script type="text/javascript" src="https://unpkg.com/tabulator-tables/dist/js/tabulator.min.js"></script>
 </head>
+<body>
+    
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+     <a class="navbar-brand" href="/home">{{ $user->name }}さんの献立</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav4" aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav4">
+          <ul class="navbar-nav">
+              <li class="nav-item active">
+                  <a class="nav-link" href="/search">料理一覧<span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/item/registration">料理追加</a>
+              </li>
+              @if(session("is_admin")==1) 
+              <li class="nav-item">
+                  <a class="nav-link" href="/item">写真一覧</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/list">アカウント一覧</a>
+              </li>
+              @endif
+              <li class="nav-item">
+              <a class="nav-link" href="/logout">ログアウト</a>
+             </li>
+         </ul>
+     </div>
+</nav>
 
 <div class="container">
 <h2>料理一覧画面</h2>
@@ -85,6 +114,7 @@
 </div>
 
 </div>
+    </body>
 <!-- <script>
 let table = new Tabulator('#sort_table', {});    
 </script> -->
