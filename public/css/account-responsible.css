@@ -1,5 +1,5 @@
 @charset "utf-8";
-@media (max-width: 800px){
+@media (max-width: 1000px){
 
     /* タイトルのCSS */
     h2 {
@@ -63,4 +63,39 @@
        color:aliceblue;
     }
 
+    .detail-list li.title {
+        font-size: 2em;
+    }
+    
+    .detail-list li.introduction{
+        margin-top: 10px;
+        /* color: green; */
+    }
+    
+    .detail-list td {
+        height: 350px;
+    }
+    
+    .detail-list td.image {
+        width: 40%;
+        text-align: center;
+    }
+    .detail-list {
+        display: flex;
+    }
+    
+    .detail-list table {
+        width: auto;
+        table-layout: fixed;
+        margin-top: 30px;
+    }
+    
+    .detail-list li {
+        list-style: none;
+        font-size: 1em;
+        /* border-bottom: solid 0.5px gray; */
+        margin: 8px 0px 15px 40px;
+    }
+
 }
+

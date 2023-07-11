@@ -1,37 +1,6 @@
+
+
 /* 全画面共通 */
-
-body{
-height:100vh;
-background-color: rgb(130, 138, 130);
-}
-
-h2 {
-    text-align:center;
-    padding: 1rem 3rem;
-    color: #fff;
-    /* border-radius: 100vh; */
-    background-image: -webkit-linear-gradient(right, #c5d0bb 0%, #262a29 100%);
-    background-image: linear-gradient(to left, #4b4f48 0%, #c1d8d3 100%);
-  }
-
-header{
-    position:fixed;
-    left:0px;
-    right:0px;
-    background-color: rgb(225, 230, 225);
-    padding-top: 10px;
-}
-
-header p{
-    margin-top:10px;
-    margin-bottom:0px;
-}
-
-header div{
-    width:100%;
-    display:flex;
-    justify-content:center;
-}
 
 main{
     margin-top:150px
@@ -53,14 +22,18 @@ main{
 
 /* 商品一覧画面 */
 
+
+
 .index-books{
-    display:flex; 
-    flex-wrap:wrap;
+    display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	padding: 2px;
 }
 
 .index-book-information{
-    width:45%;
-    height:300px;
+    width:calc(33.3% - 4px);
+    height:450px;
     align-items: center;
     display:flex;
     background-color:rgb(189, 185, 179);
@@ -68,6 +41,37 @@ main{
     margin-bottom:20px;
     margin-top:20px;
 }
+
+@media (max-width: 1200px) {
+	.index-book-information {
+		width: calc(50% - 2px);
+        height:450px;
+        align-items: center;
+        display:flex;
+        background-color:rgb(189, 185, 179);
+        margin:auto;
+        margin-bottom:20px;
+        margin-top:20px;
+	}
+    
+    .index-book-details li p{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+	.index-book-information {
+		width: calc(100% - 1px);
+        height:450px;
+        align-items: center;
+        display:flex;
+        background-color:rgb(189, 185, 179);
+        margin:auto;
+        margin-bottom:20px;
+        margin-top:20px;
+	}
+}
+
 
 .index-book-image{
     width:250px;

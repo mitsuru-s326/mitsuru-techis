@@ -77,7 +77,6 @@
             <th scope="col">ジャンル<a href="{{ url('/search?sort=genre_up') }}">↑</a> &nbsp<a href="{{ url('/search?sort=genre_down') }}">↓</a></th>
             <th scope="col">料理時間</th>
             <th scope="col">作り方</th>
-            <th scope="col">登録者</th>
             @if(session("is_admin")==1) 
             <th scope="col">料理編集</th>
             <th scope="col">料理削除</th>
@@ -92,7 +91,6 @@
             <td>{{$item->genre}}</td>
             <td>{{$item->time}} 分</td>
             <td><a href="{{ $item->recipe }}">作り方へ</a></td>
-            <td>{{$item->user}} </td>
             @if(session("is_admin")==1) 
             <td><a href="/item/edit/{{$item->id}}">編集</a></td>
             <td><a href="/item/edit/delete/{{$item->id}}">削除</a></td>

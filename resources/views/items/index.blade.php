@@ -8,10 +8,9 @@
 
 <body class="text-center">
     <h2>料理一覧（写真メイン）</h2>
-  <br>
 
   <!-- 検索機能 -->
-<!-- <div class = list>
+<!-- <div class = >
 <div class="search-form">
     <form class="row g-2" action="{{ url('/search') }}" method="GET">
         @csrf
@@ -26,7 +25,7 @@
 </div> -->
 
 <!-- 一覧表示・検索結果表示 -->
-<!-- <div class="list-form">
+<!-- <div class="">
     <div>
     <?php $url = $_SERVER['REQUEST_URI']; ?>
     <?php if (strstr($url, 'keyword')) : ?>
@@ -36,8 +35,6 @@
     <?php endif; ?>
     <hr>
     </div> -->
-  
-  <br>
 
   <main>
     <div class="index-books">   
@@ -54,14 +51,13 @@
           
           <div class="index-book-details">
             <li><b>料理名：{{$item->title}}</b></li>
-            <li>ジャンル：{{$item->genre}}</li>
-            <li>料理時間：{{$item->time}}</li>
-            <li><p>料理の説明：{{$item->introduction}}</P></li>
+            <li><p>ジャンル：{{$item->genre}}</p></li>
+            <li><p>料理時間：{{$item->time}}</p></li>
+            <li><p>料理の説明：{{$item->introduction}}</p></li>
             <li><p>料理のレシピ：<a href="{{ $item->recipe }}">作り方へ</a></p></li>
-            <!-- <li><p>料理の主な材料：{{$item->material}}</P></li>
-            <li>材料費：{{number_format($item->price)}}円</li> -->
+            <li><p>料理の主な材料：{{$item->material}}</p></li>
+            <li><p>材料費：{{number_format($item->price)}}円</p></li>
 
-            
             <li><button type="sumbit"><a href="/item/edit/{{$item->id}}">料理編集画面へ</a></button></li>
             <li><button type="sumbit"><a href="/item/edit/delete/{{$item->id}}">料理削除</a></button></li>
           </div>
@@ -77,5 +73,5 @@
   </footer>
   
   <br>
-
+  </form>
 </body>

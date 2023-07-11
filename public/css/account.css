@@ -116,7 +116,7 @@ h2 {
 }
 
 .detail-list li.title {
-    font-size: 2.2em;
+    font-size: 4em;
 }
 
 .detail-list li.introduction{
@@ -129,9 +129,7 @@ h2 {
 }
 
 .detail-list td.image {
-    width: 350px;
-    /* outline: solid 0.5px lightgray; */
-    /* outline-offset: -20px; */
+    width: 550px;
     text-align: center;
 }
 
@@ -190,93 +188,123 @@ h2 {
     /* border-radius: 0.25rem; */
 }
 
-/* .header {
-height: 60px;
-width: 100%;
-box-shadow: 0 0 10px #dddddd;
-background-color: white;    
-position: fixed;
+main{
+    margin-top:150px
+}  
+
+/* 登録・編集画面共通 */
+
+.error-display{
+    width:70%;
+    margin:auto;
+    color:white;
+    background-color: rgb(20, 19, 19);
+    border-radius: 10px;
+    margin-bottom:0px;
+    margin-top:10px;
+    text-decoration: none;
+    list-style: none;
 }
 
-.header-left {
-float: left;
-}
+/* 商品一覧画面 */
 
-.header-right {
-float: right;
-}
 
-.clear {
-clear:both;
-}
 
-.header-right a {
-    line-height: 60px;
-    color:#9be15d;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: x-large;
-}
-
-.header-right a:hover{
-    background-color: rgb(198, 236, 236);
-}
-.container{
-    max-width: 1200px;
-    padding:0 30px ;
-    margin-left: auto;
-    margin-right: auto;
-} */
-/* .li{
-    list-style-type: none;
-    border: solid black 1px;
-    width: 100%;
-}
-
-.list-1 {
-    background: greenyellow;
-    height: 50px;
+.index-books{
     display: flex;
-    justify-content: center;
+	flex-wrap: wrap;
+	gap: 4px;
+	padding: 2px;
+}
+
+.index-book-information{
+    width:calc(33.3% - 4px);
+    height:450px;
     align-items: center;
-    border: 2px solid #000;
+    display:flex;
+    background-color:rgb(189, 185, 179);
+    margin:auto;
+    margin-bottom:20px;
+    margin-top:20px;
 }
 
-.button{
-    display: block;
-    font-size: 120%;
-    border: none;
-    text-align: center;
+@media (max-width: 1200px) {
+	.index-book-information {
+		width: calc(50% - 2px);
+        height:450px;
+        align-items: center;
+        display:flex;
+        background-color:rgb(189, 185, 179);
+        margin:auto;
+        margin-bottom:20px;
+        margin-top:20px;
+	}
+    
+    .index-book-details li p{
+        font-size: 14px;
+    }
 }
 
-.user-btn{
-    border: solid black 1px;
-    background-color: #d8d8d8;
-    width: 70%;
-    height: 20px;
-    margin: 10px;
+@media (max-width: 800px) {
+	.index-book-information {
+		width: calc(100% - 1px);
+        height:450px;
+        align-items: center;
+        display:flex;
+        background-color:rgb(189, 185, 179);
+        margin:auto;
+        margin-bottom:20px;
+        margin-top:20px;
+	}
 }
 
-.button:hover{
-    color: aliceblue;
+
+.index-book-image{
+    width:250px;
+    margin-top:10px;
+    margin-bottom:10px;
 }
 
-.main-wrapper {
-    border: 1px solid;
+.index-book-image img{
+    width:200px;
+    height:270px;
+    margin:auto;
+    padding-left:15px;
+}
+
+.index-book-details{
+    width:100%; 
+    list-style:none;
+    text-align:left;
+    margin-top:20px;
+    margin-bottom:10px;
+    margin-right:5px;
+    margin-left:20px;
+}
+
+.index-book-details li p{
+    height:50px;
+    overflow:auto; 
+    margin-bottom:2px;
+}
+
+.index-book-details li button{
+    margin-top:5px;
+    margin-bottom:5px;
+    width: 150px;
+    text-decoration:none;
+    border-radius: 10px;
+}
+
+.index-book-details button a{
+    text-decoration:none;
+}
+
+.pagination{
+    width:100%;
+    justify-content:center;
+}
+
+.imag {
     height: auto;
-    display: flex;
 }
-
-.btn-wrapper {
-    width: 15%;
-    border: 1px solid;
-    position: fixed;
-}
-
-.content-wrapper {
-    width: 70%;
-    background-image: url("../ryouri.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-} */
