@@ -5,8 +5,7 @@
 <body class="text-center">
 
 <header> 
-    <h1>料理登録画面</h1>
-    <button class="w-200 btn btn-lg"><a href="/search">料理一覧画面へ戻る</a></button>
+    <h2>料理登録画面</h2>
 </header>
 
 <br>

@@ -1,4 +1,23 @@
 @charset "utf-8";
+
+@media (max-width: 1200px) {
+	.index-book-information {
+		width: calc(50% - 2px);
+        height:450px;
+        align-items: center;
+        display:flex;
+        background-color:rgb(189, 185, 179);
+        margin:auto;
+        margin-bottom:20px;
+        margin-top:20px;
+	}
+    
+    .index-book-details li p{
+        font-size: 14px;
+    }
+}
+
+
 @media (max-width: 1000px){
 
     /* タイトルのCSS */
@@ -99,3 +118,17 @@
 
 }
 
+
+
+@media (max-width: 800px) {
+	.index-book-information {
+		width: calc(100% - 1px);
+        height:450px;
+        align-items: center;
+        display:flex;
+        background-color:rgb(189, 185, 179);
+        margin:auto;
+        margin-bottom:20px;
+        margin-top:20px;
+	}
+}

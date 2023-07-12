@@ -20,6 +20,7 @@ class SearchController extends Controller
             $query->where('title', 'LIKE', "%{$keyword}%")
                 ->orWhere('genre', 'LIKE', "%{$keyword}%");
         }
+        
         $sort = $request->input('sort');
         if(!empty($sort)) {
             if ($sort=='title_up'){

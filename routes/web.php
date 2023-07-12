@@ -58,6 +58,9 @@ use Illuminate\Support\Facades\Route;
         //献立に登録する機能
         Route::post('/menu', [App\Http\Controllers\ItemController::class, 'Menu']);
 
+        //献立に日付を登録する機能
+        Route::post('/day', [App\Http\Controllers\ItemController::class, 'day']);
+
          // 「商品の新規登録画面へ」ボタンがクリックされたときの遷移を取得
          Route::get('item/registration', function () {
             return view('items.registration');

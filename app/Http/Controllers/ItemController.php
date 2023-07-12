@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Item_User;
 use Illuminate\Http\Request;
 
 use App\Models\Item;
@@ -14,6 +15,7 @@ class ItemController extends Controller
     public function GetIndex(Request $request)
     {
         // 商品一覧を取得する関数
+        $users = User::find(session("id"));
         $items = Item::where("status", "active")->latest()->paginate(6);
         return view('items.index', ["items" => $items,"keyword" => ""]);
     }
@@ -116,6 +118,23 @@ class ItemController extends Controller
         return redirect('/search');
     
         
+    }
+
+    public function day(Request $request)
+    {
+        // 献立に日付を登録する関数
+        $item_id = $request->itemId;
+        // dd($request);
+        $user = User::find(session("id"));
+        $test = Item_User::where('user_id',$user->id)->where('item_id',$item_id)->get()->first();
+        $test->date = $request->date;
+        $test->save();
+        
+        // $userId = $request
+        // $itemId = $request ->get('date');
+        
+
+        return redirect('/home');   
     }
 
 }
