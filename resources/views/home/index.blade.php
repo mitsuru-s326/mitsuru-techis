@@ -50,7 +50,7 @@
         </tr>
         </thead>
     <tbody>
-            @foreach ($user->items as $item)
+            @foreach ($items as $item)
             <form action="{{url('day')}}" method="POST" class="" >
             {{ csrf_field() }}
         <tr>

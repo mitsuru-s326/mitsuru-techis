@@ -13,7 +13,7 @@ class AccountController extends Controller
         * ログイン画面に移動する関数
         *
         * @param Request $request
-        * @return Response
+
         */
         public function login(){
             return view('account.login');   
@@ -24,9 +24,11 @@ class AccountController extends Controller
     public function list(){
 
         //アカウント一覧、データベースに入っているものをすべて取り出して表示する関数。
+        $username = User::find(session("id"))->name;
         $user = User::all();
         return view('account.list',)->with([
             'users' => $user,
+            'name' => $username,
         ]);
     }    
     
@@ -34,7 +36,6 @@ class AccountController extends Controller
         * アカウント登録の画面に移動する関数
         *
         * @param Request $request
-        * @return Response
         */
         public function toroku(){
              return view('account.register');   
@@ -95,8 +96,6 @@ class AccountController extends Controller
             * アカウントを削除する関数
             *
             * @param Request $request
-            * @param Member $member
-            * @return Response
             */
         public function AccountDestroy(Request $request)
         {   $user = User::where('id', '=',$request->id)->delete();

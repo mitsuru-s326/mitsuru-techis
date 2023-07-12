@@ -15,9 +15,10 @@ class ItemController extends Controller
     public function GetIndex(Request $request)
     {
         // 商品一覧を取得する関数
+        $username = User::find(session("id"))->name;
         $users = User::find(session("id"));
         $items = Item::where("status", "active")->latest()->paginate(6);
-        return view('items.index', ["items" => $items,"keyword" => ""]);
+        return view('items.index', ["items" => $items,"keyword" => ""],['name' => $username],);
     }
 
     public function RegisterItem(Request $request)
