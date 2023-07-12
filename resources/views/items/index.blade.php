@@ -8,34 +8,7 @@
 
 <body class="text-center">
     <h2>料理一覧（写真メイン）</h2>
-
-  <!-- 検索機能 -->
-<!-- <div class = >
-<div class="search-form">
-    <form class="row g-2" action="{{ url('/search') }}" method="GET">
-        @csrf
-        <div class="col-auto">
-        <input class="form-control" type="text" name="keyword" value="{{$keyword}}">
-        </div>
-        <div class="col-auto">
-        <input class="btn btn-Dark" type="submit" value="検索">
-        </div>
-    </form>
-</div>
-</div> -->
-
-<!-- 一覧表示・検索結果表示 -->
-<!-- <div class="">
-    <div>
-    <?php $url = $_SERVER['REQUEST_URI']; ?>
-    <?php if (strstr($url, 'keyword')) : ?>
-        検索結果表示 <a href="/search">全件表示に戻る</a>
-    <?php else : ?>
-        全件表示
-    <?php endif; ?>
-    <hr>
-    </div> -->
-
+    
   <main>
     <div class="index-books">   
       @foreach($items as $item)
@@ -58,6 +31,12 @@
             <li><p>料理の主な材料：{{$item->material}}</p></li>
             <li><p>材料費：{{number_format($item->price)}}円</p></li>
 
+            <li><button type="submit" name="item_id" value="{{$item->id}}" >
+              @if($user->items->contains($item->id))
+              献立から削除
+              @else献立へ登録
+              @endif
+            </button></li>    
             <li><button type="sumbit"><a href="/item/edit/{{$item->id}}">料理編集画面へ</a></button></li>
             <li><button type="sumbit"><a href="/item/edit/delete/{{$item->id}}">料理削除</a></button></li>
           </div>

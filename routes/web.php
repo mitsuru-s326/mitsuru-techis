@@ -62,10 +62,12 @@ use Illuminate\Support\Facades\Route;
         Route::post('/day', [App\Http\Controllers\ItemController::class, 'day']);
 
          // 「商品の新規登録画面へ」ボタンがクリックされたときの遷移を取得
-         Route::get('item/registration', function () {
-            return view('items.registration');
-        });
-       
+        //  Route::get('item/registration', function () {
+        //     return view('items.registration');
+        // });
+        
+        Route::get('item/registration', [App\Http\Controllers\ItemController::class, 'Regitration']);
+        
         // // 商品登録画面
         // 「商品新規登録画面へ」ボタンがクリックされたときの遷移を取得
         Route::post('item/registration', [App\Http\Controllers\ItemController::class, 'RegisterItem'])->name('registration');

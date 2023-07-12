@@ -15,10 +15,23 @@ class ItemController extends Controller
     public function GetIndex(Request $request)
     {
         // 商品一覧を取得する関数
-        $username = User::find(session("id"))->name;
         $users = User::find(session("id"));
         $items = Item::where("status", "active")->latest()->paginate(6);
-        return view('items.index', ["items" => $items,"keyword" => ""],['name' => $username],);
+        return view('items.index', ["items" => $items,"keyword" => ""],["user" => $users],);
+    }
+        
+
+    /**
+     * Summary of Regitration
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function Regitration(Request $request)
+    {
+        //商品登録画面を取得する関数
+        $users = User::find(session("id"));
+        return view('items.registration',["user" => $users],);
+
     }
 
     public function RegisterItem(Request $request)
@@ -94,8 +107,9 @@ class ItemController extends Controller
     {
         // 編集対象の本に関する情報を取得する関数
         $item = Item::find($id);
+        $users = User::find(session("id"));
 
-        return view('items.edit', ["item" => $item]);
+        return view('items.edit', ["item" => $item],["user" => $users],);
     }
 
     public function DeleteItem($id)
