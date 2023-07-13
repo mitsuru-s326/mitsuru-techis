@@ -33,7 +33,11 @@
 </nav>
             
             <h2>献立のホーム画面へようこそ<br>この献立システムは毎日の夕食メニューを管理するためのシステムです</h2>
-            <br>     
+           
+            <div class="bg_test">
+            <div class="bg_test-text">
+            <div class=list>
+
             <h3>{{ $user->nick_name }}さんの献立</h3>
 
     <div class="container">
@@ -56,7 +60,7 @@
         <tr>
             <input type="hidden" name="itemId" value="{{ $item->id }}">
             <td><input type="date" name="date" value="{{App\Models\Item_User::where('user_id',$user->id)->where('item_id',$item->id)->get()->first()->date}}"></td>
-            <td><button type="sumbit">日付更新</button></td>
+            <td><button type="sumbit" class="btn btn-Dark">日付更新</button></td>
             <th scope="row"><a href="/search/detail/{{ $item->id }}">{{$item->title}}</a></th>
             <td>{{$item->genre}}</td>
             <td>{{$item->time}} </td>
@@ -71,6 +75,7 @@
         
     </div>
     </div>
+</div>
 </div>
 </body>
 </html>

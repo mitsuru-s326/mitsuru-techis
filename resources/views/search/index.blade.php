@@ -17,12 +17,12 @@
                   <a class="nav-link" href="/search">料理一覧<span class="sr-only"></span></a>
               </li>
               <li class="nav-item">
+                  <a class="nav-link" href="/item">料理一覧（写真）</a>
+              </li>
+              <li class="nav-item">
                   <a class="nav-link" href="/item/registration">料理追加</a>
               </li>
               @if(session("is_admin")==1) 
-              <li class="nav-item">
-                  <a class="nav-link" href="/item">写真一覧</a>
-              </li>
               <li class="nav-item">
                   <a class="nav-link" href="/list">アカウント一覧</a>
               </li>
@@ -36,9 +36,7 @@
 
 <div class="container">
 <h2>料理一覧画面</h2>
-<div class="list">
-<a class="btn btn-outline-secondary" href="/home">ホーム画面に戻る</a>
-</div>
+
 
 <!-- 検索機能 -->
 <div class = list>
@@ -67,6 +65,11 @@
     <hr>
     </div>
 
+<div class="bg_test">
+
+
+<div class="bg_test-text">
+
     <form action="{{url('menu')}}" method="POST" class="" >
         {{ csrf_field() }}
        
@@ -89,7 +92,7 @@
         <tr>
             <th scope="row"><a href="/search/detail/{{ $item->id }}">{{$item->title}}</a></th>
             <td>{{$item->genre}}</td>
-            <td>{{$item->time}} 分</td>
+            <td>{{$item->time}} </td>
             <td><a href="{{ $item->recipe }}">作り方へ</a></td>
             @if(session("is_admin")==1) 
             <td><a href="/item/edit/{{$item->id}}">編集</a></td>

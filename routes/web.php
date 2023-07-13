@@ -76,7 +76,11 @@ use Illuminate\Support\Facades\Route;
 
         // 「ホーム画面に戻る」ボタンがクリックされたときの遷移を取得
         Route::get('item/home', [App\Http\Controllers\ItemController::class, 'ReturnHome'])->name('return');;
+        
+        //料理一覧画面（写真）
 
+        // 料理一覧画面（写真）を表示する場合はここを通す
+        Route::get('item/', [App\Http\Controllers\ItemController::class, 'GetIndex'])->name('index');      
 
 
     });
@@ -91,10 +95,7 @@ use Illuminate\Support\Facades\Route;
         Route::get('/list', [App\Http\Controllers\AccountController::class, 'list']);
 
 
-        //料理管理画面
-
-        // 料理管理画面を表示する場合はここを通す
-        Route::get('item/', [App\Http\Controllers\ItemController::class, 'GetIndex'])->name('index');        
+         
         
 
         // 「商品の編集画面へ」ボタンがクリックされたときの遷移を取得

@@ -1,3 +1,24 @@
+
+a{
+    padding: 0 10px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgb(123, 193, 225) 50%);
+    background-position: 0 0;
+    background-size: 200% auto;
+    transition: .3s;
+    color:black;
+    text-decoration: none;
+  }
+  
+  a:hover{
+    background-position: -100% 0;
+    color: #fff;
+  }
+  b{
+    font-size: larger;
+    font-weight: bold;
+
+  }
+
 .titleColor {
     text-align:center;
     color:aliceblue; 
@@ -60,7 +81,7 @@ h2 {
 .bg_test {
     height: auto;
     text-align:  center;    /* 文字中央寄せ */
-    padding:  10%;        /* 余白指定 */
+    padding:  2%;        /* 余白指定 */
     /* margin: 2%; */
     border: solid 0px;      /* 枠線指定 */
     background-color:rgb(255, 255, 255);/*背景色指定*/
@@ -222,7 +243,7 @@ main{
     height:450px;
     align-items: center;
     display:flex;
-    background-color:rgb(189, 185, 179);
+    background-color:rgb(206, 227, 232);
     margin:auto;
     margin-bottom:20px;
     margin-top:20px;

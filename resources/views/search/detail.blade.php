@@ -1,10 +1,10 @@
 @include('account.common')
 <head>
-    <title>料理編集・削除画面</title>
+    <title>料理の詳細</title>
 </head>
 
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
-     <a class="navbar-brand" href="/home">献立</a>
+     <a class="navbar-brand" href="/home">献立一覧へ</a>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav4" aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -38,6 +38,9 @@
     </div>
 
     <!-- 詳細画面 -->
+<div class="bg_test">
+
+    <div class="bg_test-text">
 
     <div class="detail-list">
         <table>
@@ -57,10 +60,10 @@
                             ジャンル：{{$item->genre}}
                         </li>
                         <li>
-                            料理時間：{{$item->time}}分
+                            料理時間：{{$item->time}}
                         </li>
                         <li>
-                            作り方：<a href="{{ $item->recipe }}">作り方のURLページへ</a>
+                            作り方：<a href="{{ $item->recipe }}">作り方WEBサイトへ</a>
                         </li>
                         <li>
                             主な材料：{{$item->material}}
@@ -77,7 +80,8 @@
             </tbody>
         </table>
     </div>
-
+</div>
+</div>
 </div>
 
 <!-- <li><b>料理名：{{$item->title}}</b></li>
