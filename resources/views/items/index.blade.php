@@ -29,9 +29,9 @@
             <li><p>料理の説明：{{$item->introduction}}</p></li>
             <li><p>料理のレシピ：<a href="{{ $item->recipe }}">作り方へ</a></p></li>
             <li><p>料理の主な材料：{{$item->material}}</p></li>
-            <li><p>材料費：{{number_format($item->price)}}円</p></li>
-            @if(session("is_admin")==1) 
+            <li><p>材料費：{{number_format($item->price)}}円</p></li> 
             <li><button type="sumbit"><a href="/item/edit/{{$item->id}}">料理編集画面へ</a></button></li>
+            @if(session("is_admin")==1)
             <li><button type="sumbit"><a href="/item/edit/delete/{{$item->id}}">料理削除</a></button></li>
             @endif
           </div>

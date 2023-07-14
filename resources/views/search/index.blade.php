@@ -100,9 +100,9 @@
             @endif
             <td><button type="submit" name="item_id" value="{{$item->id}}" >
             @if($user->items->contains($item->id))
-            <a style= background:red > 献立から削除</a>
+            <div class="botton-dele"> 献立から削除</div>
             @else
-            <a style= background:yellow > 献立へ登録</a>
+            <div class="botton-regi"> 献立へ登録</div>
             @endif
             </button><td>
         </tr> 

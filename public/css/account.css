@@ -33,8 +33,8 @@ h2 {
     padding: 1rem 3rem;
     color: #fff;
     /* border-radius: 100vh; */
-    background-image: -webkit-linear-gradient(right, #c5d0bb 0%, #262a29 100%);
-    background-image: linear-gradient(to left, #4b4f48 0%, #c1d8d3 100%);
+    background-image: -webkit-linear-gradient(right, #c5d0bb 0%, #85adbb 100%);
+    background-image: linear-gradient(to left, #74eef9 0%, #c1d8d3 100%);
   }
   
     h3 {
@@ -302,3 +302,32 @@ main{
 .imag {
     height: auto;
 }
+
+.botton-dele {
+        text-align    : center;      /* 文字位置   */
+        cursor        : pointer;     /* カーソル   */
+        background    : #ec5544;     /* 背景色     */
+        color         : #ffffff;     /* 文字色     */
+        line-height   : 1em;         /* 1行の高さ  */
+
+      }
+.botton-dele:hover {
+        box-shadow    : none;        /* カーソル時の影消去 */
+        color         : #ee1e1b;     /* 背景色     */
+        background    : #ffffff;     /* 文字色     */
+      }
+
+.botton-regi {
+        text-align    : center;      /* 文字位置   */
+        cursor        : pointer;     /* カーソル   */
+        background    : #34b4eb;     /* 背景色     */
+        color         : #ffffff;     /* 文字色     */
+        line-height   : 1em;         /* 1行の高さ  */
+
+      }
+
+.botton-regi:hover {
+        box-shadow    : none;        /* カーソル時の影消去 */
+        color         : #251bee;     /* 背景色     */
+        background    : #ffffff;     /* 文字色     */
+      }

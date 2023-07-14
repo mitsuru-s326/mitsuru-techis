@@ -5,7 +5,7 @@
 
 <body>
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
-     <a class="navbar-brand" href="/home">ホーム画面</a>
+     <a class="navbar-brand" href="/home">{{ $user->name }}さんの献立</a>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav4" aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -15,12 +15,12 @@
                   <a class="nav-link" href="/search">料理一覧<span class="sr-only"></span></a>
               </li>
               <li class="nav-item">
+                  <a class="nav-link" href="/item">料理一覧（写真）</a>
+              </li>
+              <li class="nav-item">
                   <a class="nav-link" href="/item/registration">料理追加</a>
               </li>
               @if(session("is_admin")==1) 
-              <li class="nav-item">
-                  <a class="nav-link" href="/item">写真一覧</a>
-              </li>
               <li class="nav-item">
                   <a class="nav-link" href="/list">アカウント一覧</a>
               </li>
@@ -80,7 +80,7 @@
                 <p>画像のアップロード</p>
                 <input class="form-control" type="file" name="image" accept="image/jpg, image/jpeg, image/png"> 
                 <br>
-                <button type="sumbit" class="btn btn-Dark">登録する</button>
+                <button type="sumbit" class="btn btn-info">登録する</button>
         </form>
     </div>
 

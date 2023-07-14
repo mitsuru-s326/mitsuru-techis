@@ -4,7 +4,7 @@
     </head>
 <body>
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
-     <a class="navbar-brand" href="/home">ホーム画面</a>
+     <a class="navbar-brand" href="/home">献立一覧へ</a>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav4" aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -76,7 +76,7 @@
 
         <!-- アカウント変更ボタン -->
         <div class="form-group">
-            <button type="submit" class="btn btn-Dark">アカウント情報変更</button>
+            <button type="submit" class="btn btn-info">アカウント情報変更</button>
         </div>       
     </form>
 
@@ -86,7 +86,7 @@
 
 <div>
     <input type="hidden" name="id" value="{{$user ->id}}">
-    <button type="submit" class="btn btn-Dark">アカウント情報削除</button>
+    <button type="submit" class="btn btn-info">アカウント情報削除</button>
 </div>
 
 </form>

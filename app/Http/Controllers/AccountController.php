@@ -89,7 +89,7 @@ class AccountController extends Controller
                     // 'email' => $request->email,
                     'password' => $request->password,
                 ]);
-            return redirect('/');
+            return redirect('/list');
             }
 
         /**
@@ -99,7 +99,7 @@ class AccountController extends Controller
             */
         public function AccountDestroy(Request $request)
         {   $user = User::where('id', '=',$request->id)->delete();
-            return redirect('/');
+            return redirect('/list');
         }
 
 // ログアウトする画面に遷移する関数        

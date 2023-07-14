@@ -30,13 +30,13 @@
         
         <!-- タスク名 バリデーションでメールとパスワードにはconfirmationを入れている -->
 
-<!-- 背景の黒の四角 -->
+<!-- 背景の四角 -->
 <div class="bg_test-text">
     
 
 
         <div class="mb-3 row">
-                    <div class=lavelColor><label>名前</label></div>
+                    <div class=lavelColor>名前</div>
                     <div class=sukima></div>
                         <input type="text" name="name" class="form-control" class="justify-content-center" placeholder="名前" value="{{ old('name') }}">
                         <p style= color:green>{{ $errors->first("name") }}</p>
@@ -64,7 +64,7 @@
 
         <!-- ユーザー追加ボタン -->
         <div class="form-group">
-                <button type="submit" class="btn btn-Dark" onclick="location.href='login'">アカウント登録</button>
+                <button type="submit" class="btn btn-info" onclick="location.href='login'">アカウント登録</button>
         </div>
        
     </form>

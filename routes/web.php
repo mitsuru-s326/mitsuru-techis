@@ -82,6 +82,14 @@ use Illuminate\Support\Facades\Route;
         // 料理一覧画面（写真）を表示する場合はここを通す
         Route::get('item/', [App\Http\Controllers\ItemController::class, 'GetIndex'])->name('index');      
 
+         // // 商品編集画面
+
+        // 「商品の編集画面へ」ボタンがクリックされたときの遷移を取得
+        Route::get('item/edit/{id}', [App\Http\Controllers\ItemController::class, 'GetUpdateItem'])->name('item');
+
+        // 「更新」ボタンがクリックされたときの遷移を取得
+        Route::post('item/edit/update/{id}', [App\Http\Controllers\ItemController::class, 'UpdateItem'])->name('update');
+
 
     });
 
@@ -94,21 +102,13 @@ use Illuminate\Support\Facades\Route;
         //アカウント一覧画面を取得
         Route::get('/list', [App\Http\Controllers\AccountController::class, 'list']);
 
-
-         
-        
-
-        // 「商品の編集画面へ」ボタンがクリックされたときの遷移を取得
-        Route::get('item/edit/{id}', [App\Http\Controllers\ItemController::class, 'GetUpdateItem'])->name('item');
+         // // 商品編集画面
 
         // 「削除」ボタンがクリックされたときの遷移を取得
         Route::get('item/edit/delete/{id}', [App\Http\Controllers\ItemController::class, 'DeleteItem'])->name('deletion');
 
 
-        // // 商品編集画面
-
-        // 「更新」ボタンがクリックされたときの遷移を取得
-        Route::post('item/edit/update/{id}', [App\Http\Controllers\ItemController::class, 'UpdateItem'])->name('update');
+       
 
 });
 

@@ -15,10 +15,10 @@ class ItemFactory extends Factory
     {
         return [
             'status' => 'active',
-            'title' => $this->faker->country(),
+            'title' => $this->faker->unique()->country(),
             'genre' => $this->faker->city(),
             'time' => $this->faker->time(),
-            'introduction' => $this->faker->realText(),
+            'introduction' => $this->faker->realText(80),
             'material' => $this->faker->realText(80),
             'image' => $this->faker->imageUrl(480, 300),
             'price' => $this->faker->randomNumber(6, true),
