@@ -26,13 +26,13 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         
-        //
-        // if (\App::environment(['production'])) {
-        //     \URL::forceScheme('https');
-        //     $this->app['request']->server->set('HTTPS','on');
+        
+        if (\App::environment(['production'])) {
+            \URL::forceScheme('https');
+            $this->app['request']->server->set('HTTPS','on');
 
        
-        // }
+        }
         \Illuminate\Support\Facades\Schema::defaultStringLength(191);
     }
 }
