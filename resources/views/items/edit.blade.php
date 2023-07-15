@@ -105,8 +105,8 @@
     <div>
         <p>料理の主な材料（買い物リスト）</p>
         <p class="book-introduction"><input class="form-control" type="text" name="material" value="{{$item->material}}" maxlength="200" required></p>
-            @if($errors->has('introduction'))
-                @foreach($errors->get('introduction') as $message)
+            @if($errors->has('material'))
+                @foreach($errors->get('material') as $message)
                 <div class ="error-display">{{ $message }}</div>
                 @endforeach
             @endif

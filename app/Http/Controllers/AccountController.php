@@ -83,13 +83,22 @@ class AccountController extends Controller
        // アカウントを編集して登録する関数
        public function AccountEdit(Request $request)
         {             
-            User::where('id', '=',$request->id)->update([
+                $this->validate($request, [
+                    'name' => 'required|max:255',
+                    'nick_name' => 'required|max:100',
+                    'email' => 'required|min:5|confirmed|email',
+                    'password' => 'required|max:255|confirmed|',
+                ]);
+
+                User::where('id', '=',$request->id)->update([
                     'name' => $request->name,
                     'nick_name' => $request->nick_name,
-                    // 'email' => $request->email,
+                    'email' => $request->email,
                     'password' => $request->password,
                 ]);
+
             return redirect('/list');
+            
             }
 
         /**

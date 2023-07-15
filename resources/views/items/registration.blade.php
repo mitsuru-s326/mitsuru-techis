@@ -41,15 +41,16 @@
 <div class="bg_test-text">
 
     <!-- 全てのエラーを一括表示する場合のコード -->
-    @foreach ($errors->all() as $error)
+    <!-- @foreach ($errors->all() as $error)
     <div class="error-display"><li>{{ $error }}</li></div>
-    @endforeach 
+    @endforeach  -->
 
     <div class="registration-book-details">
         <form action="{{ url('item/registration')}}" method="POST" class="form-horizontal" enctype="multipart/form-data">
         @csrf      
                 <p>料理名</p>
                 <input class="form-control" type="text" name="title" placeholder="料理名を20文字以内で記載して下さい。" maxlength="20" required autofocus>
+                <p>{{ $errors->first("title") }}</p>
                 <p>ジャンル</p>
                 <select class="form-control" name="genre" maxlength="20" required>
                     <option value ="" selected>以下から選択して下さい。</option>
