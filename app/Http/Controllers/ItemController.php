@@ -46,7 +46,7 @@ class ItemController extends Controller
             'material' => 'required|max:200',
             'image' => 'nullable|max:64|mimes:jpg,jpeg,png',
             'price' => 'required|integer|min:1',
-            'recipe'=> 'required|page_url|max:200',
+            'recipe'=> 'required|max:200',
         ]);
 
         $item = new Item();
@@ -80,7 +80,7 @@ class ItemController extends Controller
             'material' => 'required|max:200',
             'image' => 'max:64|mimes:jpg,jpeg,png',
             'price' => 'required|integer|min:1',
-            'recipe'=> 'required|page_url|max:200',
+            'recipe'=> 'required|max:200',
         ]);
 
         $item = Item::find($id);
