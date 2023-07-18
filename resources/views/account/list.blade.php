@@ -14,11 +14,11 @@
                   <a class="nav-link" href="/search">料理一覧<span class="sr-only"></span></a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="/item/registration">料理追加</a>
+                  <a class="nav-link" href="/item">料理一覧（写真）</a>
               </li>
               @if(session("is_admin")==1) 
               <li class="nav-item">
-                  <a class="nav-link" href="/item">写真一覧</a>
+                  <a class="nav-link" href="/item/registration">料理追加</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="/list">アカウント一覧</a>

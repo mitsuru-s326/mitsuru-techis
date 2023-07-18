@@ -49,8 +49,8 @@
         <form action="{{ url('item/registration')}}" method="POST" class="form-horizontal" enctype="multipart/form-data">
         @csrf      
                 <p>料理名</p>
-                <input class="form-control" type="text" name="title" placeholder="料理名を20文字以内で記載して下さい。" maxlength="20" required autofocus>
-                <p>{{ $errors->first("title") }}</p>
+                <input class="form-control" type="text" name="title" placeholder="料理名を20文字以内で記載して下さい。" maxlength="20" value="{{ old('tit') }}" required autofocus>
+                <div class="error-display"><p>{{ $errors->first("title") }}</p></div>
                 <p>ジャンル</p>
                 <select class="form-control" name="genre" maxlength="20" required>
                     <option value ="" selected>以下から選択して下さい。</option>
