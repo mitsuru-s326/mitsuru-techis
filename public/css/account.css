@@ -75,7 +75,7 @@ h2 {
     border:  solid 3px;                             /* 枠線指定 */
     display:  inherit;                         /* インラインブロックにする */
     padding: 10px 20px;                             /* 余白指定 */
-    background-color: rgba(222, 235, 223, 0.877);     /* 背景色指定 */
+    background-color: rgba(191, 242, 253, 0.829);     /* 背景色指定 */
 }
 
 .bg_test {
