@@ -39,15 +39,15 @@
                     <div class=lavelColor>名前</div>
                     <div class=sukima></div>
                         <input type="text" name="name" class="form-control" class="justify-content-center" placeholder="名前" value="{{ old('name') }}">
-                        <p>{{ $errors->first("name") }}</p>
+                        <p style="color:red; font-weight:bold;">{{ $errors->first("name") }}</p>
                     <div class=lavelColor><label>ニックネーム</label></div>
                     <div class=sukima></div>
                         <input type="text" name="nick_name" class="form-control" class="justify-content-center" placeholder="ニックネーム" value="{{ old('nick_name') }}">
-                        <p>{{ $errors->first("nick_name") }}</p>
+                        <p style="color:red; font-weight:bold;">{{ $errors->first("nick_name") }}</p>
                     <div class=lavelColor><label>メールアドレス</label></div>
                     <div class=sukima></div>    
                         <input type="text" name="email" class="form-control" class="justify-content-center" placeholder="メールアドレス" value="{{ old('email') }}">
-                        <p>{{ $errors->first("email") }}</p>
+                        <p style="color:red; font-weight:bold;">{{ $errors->first("email") }}</p>
                     <div class=lavelColor><label>メールアドレス確認用</label></div>
                     <div class=sukima></div>
                         <input type="text" name="email_confirmation" class="form-control" class="justify-content-center" placeholder="メールアドレス確認用" value="{{ old('email') }}">
@@ -55,7 +55,7 @@
                     <div class=lavelColor><label>パスワード</label></div>
                     <div class=sukima></div>    
                         <input type="password" name="password" class="form-control" class="justify-content-center" placeholder="パスワード">
-                        <p>{{ $errors->first("password") }}</p>
+                        <p style="color:red; font-weight:bold;">{{ $errors->first("password") }}</p>
                     <div class=lavelColor><label>パスワード確認用</label></div>
                     <div class=sukima></div>
                         <input type="password" name="password_confirmation" class="form-control" class="justify-content-center" placeholder="パスワード確認用">
