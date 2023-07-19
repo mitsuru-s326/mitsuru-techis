@@ -49,7 +49,7 @@
         <form action="{{ url('item/registration')}}" method="POST" class="form-horizontal" enctype="multipart/form-data">
         @csrf      
                 <p>料理名</p>
-                <input class="form-control" type="text" name="title" placeholder="料理名を20文字以内で記載して下さい。" maxlength="20" value="{{ old('tit') }}" >
+                <input class="form-control" type="text" name="title" placeholder="料理名を20文字以内で記載して下さい。" maxlength="20" value="{{ old('title') }}" >
                 <p style="color:red; font-weight:bold;">{{ $errors->first("title") }}</p>
                 <p>ジャンル</p>
                 <select class="form-control" name="genre" maxlength="20" value="{{ old('genre') }}">
@@ -59,6 +59,7 @@
                     <option value ="中華">中華</option>
                     <option value ="どんぶり">どんぶり</option>
                     <option value ="麺類">麺類</option>
+                    <option value ="その他">その他</option>
                 </select>
                 <p style="color:red; font-weight:bold;">{{ $errors->first("genre") }}</p>
                 <p>料理時間</p>
@@ -70,6 +71,7 @@
                     <option value ="40分">約40分</option>
                     <option value ="50分">約50分</option>
                     <option value ="60分">約60分</option>
+                    <option value ="長時間">長時間</option>
                 </select>
                 <p style="color:red; font-weight:bold;">{{ $errors->first("time") }}</p>
                 <p>料理の説明</p>
