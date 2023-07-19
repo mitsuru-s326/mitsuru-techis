@@ -45,7 +45,7 @@ class ItemController extends Controller
             'introduction' => 'required|max:200',
             'material' => 'required|max:200',
             'image' => 'nullable|max:64|mimes:jpg,jpeg,png',
-            'price' => 'required|integer|min:1',
+            'price' => 'required|integer|max:8',
             'recipe'=> 'required|max:200',
         ]);
 

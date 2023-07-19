@@ -81,7 +81,7 @@
                 <input class="form-control" type="text" name="material" placeholder="料理の材料を200文字以内で分かりやすく説明して下さい。" maxlength="200" value="{{ old('material') }}">
                 <p style="color:red; font-weight:bold;">{{ $errors->first("material") }}</p>
                 <p>材料費 (円)</p>
-                <input class="form-control" type="number" name="price" placeholder="1以上の整数を半角で記載して下さい" min="1" value="{{ old('price') }}">
+                <input class="form-control" type="number" name="price" placeholder="1以上の整数を半角で記載して下さい" max="8" value="{{ old('price') }}">
                 <p style="color:red; font-weight:bold;">{{ $errors->first("price") }}</p>
                 <p>レシピサイト（URL）</p>
                 <input class="form-control" type="text" name="recipe" placeholder="料理のレシピサイト（URL）を入力して下さい" maxlength="200" value="{{ old('recipe') }}">
