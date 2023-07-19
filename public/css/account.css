@@ -8,7 +8,7 @@ a{
     color:black;
     text-decoration: none;
   }
-  
+ 
   a:hover{
     background-position: -100% 0;
     color: #fff;
@@ -266,6 +266,7 @@ main{
     padding-left:15px;
 }
 
+
 .index-book-details{
     width:100%; 
     list-style:none;
@@ -303,31 +304,45 @@ main{
     height: auto;
 }
 
+
+.index-seach{
+
+    list-style:none;
+    text-align:left;
+    margin-top:4px;
+    margin-bottom:4px;
+    width: auto;
+    border-radius: 10px
+}
+
 .botton-dele {
         text-align    : center;      /* 文字位置   */
         cursor        : pointer;     /* カーソル   */
-        background    : #ec5544;     /* 背景色     */
+        background    : #45f938;     /* 背景色     */
         color         : #ffffff;     /* 文字色     */
-        line-height   : 1em;         /* 1行の高さ  */
+        line-height   : 1em;         /* 1行の高さ  */ 
 
       }
 .botton-dele:hover {
         box-shadow    : none;        /* カーソル時の影消去 */
-        color         : #ee1e1b;     /* 背景色     */
+        color         : #45f938;     /* 背景色     */
         background    : #ffffff;     /* 文字色     */
       }
 
 .botton-regi {
         text-align    : center;      /* 文字位置   */
         cursor        : pointer;     /* カーソル   */
-        background    : #34b4eb;     /* 背景色     */
-        color         : #ffffff;     /* 文字色     */
+        background    : #edf470;     /* 背景色     */
+        color         :black;     /* 文字色     */
         line-height   : 1em;         /* 1行の高さ  */
 
       }
 
 .botton-regi:hover {
         box-shadow    : none;        /* カーソル時の影消去 */
-        color         : #251bee;     /* 背景色     */
-        background    : #ffffff;     /* 文字色     */
+        color         : #edf470;     /* 背景色     */
+        background    : black;     /* 文字色     */
       }
+
+      
+       

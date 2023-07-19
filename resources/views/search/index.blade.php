@@ -98,7 +98,7 @@
             <td><a href="/item/edit/{{$item->id}}">編集</a></td>
             <td><a href="/item/edit/delete/{{$item->id}}">削除</a></td>
             @endif
-            <td><button type="submit" name="item_id" value="{{$item->id}}" >
+            <td><button type="submit" name="item_id" value="{{$item->id}}"  class= index-seach>
             @if($user->items->contains($item->id))
             <div class="botton-dele"> 献立から削除</div>
             @else

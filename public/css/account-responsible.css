@@ -27,8 +27,8 @@
         padding: 1rem 3rem;
         color: #fff;
         /* border-radius: 100vh; */
-        background-image: -webkit-linear-gradient(right, #c5d0bb 0%, #262a29 100%);
-        background-image: linear-gradient(to left, #4b4f48 0%, #c1d8d3 100%);
+        background-image: -webkit-linear-gradient(right, #c5d0bb 0%, #85adbb 100%);
+        background-image: linear-gradient(to left, #74eef9 0%, #c1d8d3 100%);
       }
     h3 {
         font-size:2em;
