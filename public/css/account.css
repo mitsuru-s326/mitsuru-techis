@@ -306,7 +306,6 @@ main{
 
 
 .index-seach{
-
     list-style:none;
     text-align:left;
     margin-top:4px;
@@ -321,7 +320,6 @@ main{
         background    : #45f938;     /* 背景色     */
         color         : #ffffff;     /* 文字色     */
         line-height   : 1em;         /* 1行の高さ  */ 
-
       }
 .botton-dele:hover {
         box-shadow    : none;        /* カーソル時の影消去 */
@@ -335,7 +333,6 @@ main{
         background    : #edf470;     /* 背景色     */
         color         :black;     /* 文字色     */
         line-height   : 1em;         /* 1行の高さ  */
-
       }
 
 .botton-regi:hover {
