@@ -52,8 +52,8 @@
                 <input class="form-control" type="text" name="title" placeholder="料理名を20文字以内で記載して下さい。" maxlength="20" value="{{ old('title') }}" >
                 <p style="color:red; font-weight:bold;">{{ $errors->first("title") }}</p>
                 <p>ジャンル</p>
-                <select class="form-control" name="genre" maxlength="20" value="{{ old('genre') }}">
-                    <option value ="selected">以下から選択して下さい。</option>
+                <select class="form-control" name="genre" maxlength="20">
+                    <option value="">料理のジャンルを選択してください</option>
                     <option value ="和食">和食</option>
                     <option value ="洋食">洋食</option>
                     <option value ="中華">中華</option>
@@ -63,8 +63,8 @@
                 </select>
                 <p style="color:red; font-weight:bold;">{{ $errors->first("genre") }}</p>
                 <p>料理時間</p>
-                <select class="form-control" name="time" maxlength="20" value="{{ old('time') }}">
-                    <option value ="selected">以下から選択して下さい。</option>
+                <select class="form-control" name="time" maxlength="20">
+                    <option value="">料理のおよその調理時間を選択してください</option>
                     <option value ="10分">約10分</option>
                     <option value ="20分">約20分</option>
                     <option value ="30分">約30分</option>

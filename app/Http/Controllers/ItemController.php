@@ -44,7 +44,7 @@ class ItemController extends Controller
             'time' => 'required|max:20',
             'introduction' => 'required|max:200',
             'material' => 'required|max:200',
-            'image' => 'nullable|max:128|mimes:jpg,jpeg,png',
+            'image' => 'nullable|max:64|mimes:jpg,jpeg,png',
             'price' => 'required|integer|min:1',
             'recipe'=> 'required|max:200',
         ]);

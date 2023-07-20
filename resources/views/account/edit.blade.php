@@ -58,15 +58,15 @@
             <div class=lavelColor>アカウント名</div>
             <div class=sukima></div>
                 <input type="text" name="name" class="form-control" class="justify-content-center" placeholder="名前" value="{{$user ->name}}">
-                <p>{{ $errors->first("name") }}</p>
+                <p style="color:red; font-weight:bold;">{{ $errors->first("name") }}</p>
             <div class=lavelColor>ニックネーム</div>
             <div class=sukima></div>    
                 <input type="text" name="nick_name" class="form-control" class="justify-content-center" placeholder="ニックネーム" value="{{$user ->nick_name}}">
-                <p>{{ $errors->first("nick_name") }}</p>
+                <p style="color:red; font-weight:bold;">{{ $errors->first("nick_name") }}</p>
             <div class=lavelColor>メールアドレス</div>
             <div class=sukima></div> 
                 <input type="text" name="email" class="form-control" class="justify-content-center" placeholder="メールアドレス" value="{{ $user ->email}}">
-                <p>{{ $errors->first("email") }}</p>
+                <p style="color:red; font-weight:bold;">{{ $errors->first("email") }}</p>
             <div class=lavelColor>メールアドレス確認</div>
             <div class=sukima></div> 
                 <input type="text" name="email_confirmation" class="form-control" class="justify-content-center" placeholder="メールアドレス確認用" value="{{ $user ->email}}">
