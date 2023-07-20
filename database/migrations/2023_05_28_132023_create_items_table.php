@@ -19,11 +19,11 @@ class CreateItemsTable extends Migration
             $table->string('title',100)->charser("utf8")->unique();
             $table->string('genre', 100);
             $table->string('time', 100);
-            $table->string('introduction',200); 
-            $table->string('material',200);
+            $table->string('introduction',400); 
+            $table->string('material',400);
             $table->text('image')-> nullable();
             $table->integer('price')->length(8)->default(0);
-            $table->string('recipe',200);
+            $table->string('recipe',400);
             $table->timestamps();
         });
     }

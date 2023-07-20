@@ -53,7 +53,7 @@
                 <p style="color:red; font-weight:bold;">{{ $errors->first("title") }}</p>
                 <p>ジャンル</p>
                 <select class="form-control" name="genre" maxlength="20" value="{{ old('genre') }}">
-                    <option value ="" selected>以下から選択して下さい。</option>
+                    <option value ="selected">以下から選択して下さい。</option>
                     <option value ="和食">和食</option>
                     <option value ="洋食">洋食</option>
                     <option value ="中華">中華</option>
@@ -64,7 +64,7 @@
                 <p style="color:red; font-weight:bold;">{{ $errors->first("genre") }}</p>
                 <p>料理時間</p>
                 <select class="form-control" name="time" maxlength="20" value="{{ old('time') }}">
-                    <option value ="" selected>以下から選択して下さい。</option>
+                    <option value ="selected">以下から選択して下さい。</option>
                     <option value ="10分">約10分</option>
                     <option value ="20分">約20分</option>
                     <option value ="30分">約30分</option>
@@ -75,19 +75,20 @@
                 </select>
                 <p style="color:red; font-weight:bold;">{{ $errors->first("time") }}</p>
                 <p>料理の説明</p>
-                <input class="form-control" type="text" name="introduction" placeholder="料理の説明を200文字以内で分かりやすく説明して下さい。" maxlength="200" value="{{ old('introduction') }}">
+                <input class="form-control" type="text" name="introduction" placeholder="料理の説明を200文字以内で分かりやすく説明して下さい。" value="{{ old('introduction') }}">
                 <p style="color:red; font-weight:bold;">{{ $errors->first("introduction") }}</p>
                 <p>料理の主な材料（買い物リスト）</p>
-                <input class="form-control" type="text" name="material" placeholder="料理の材料を200文字以内で分かりやすく説明して下さい。" maxlength="200" value="{{ old('material') }}">
+                <input class="form-control" type="text" name="material" placeholder="料理の材料を200文字以内で分かりやすく説明して下さい。" value="{{ old('material') }}">
                 <p style="color:red; font-weight:bold;">{{ $errors->first("material") }}</p>
                 <p>材料費 (円)</p>
-                <input class="form-control" type="number" name="price" placeholder="1以上の整数を半角で記載して下さい" max="8" value="{{ old('price') }}">
+                <input class="form-control" type="number" name="price" placeholder="1以上の整数を半角で記載して下さい" value="{{ old('price') }}">
                 <p style="color:red; font-weight:bold;">{{ $errors->first("price") }}</p>
                 <p>レシピサイト（URL）</p>
-                <input class="form-control" type="text" name="recipe" placeholder="料理のレシピサイト（URL）を入力して下さい" maxlength="200" value="{{ old('recipe') }}">
+                <input class="form-control" type="text" name="recipe" placeholder="料理のレシピサイト（URL）を入力して下さい" value="{{ old('recipe') }}">
                 <p style="color:red; font-weight:bold;">{{ $errors->first("recipe") }}</p>
                 <p>画像のアップロード</p>
                 <input class="form-control" type="file" name="image" accept="image/jpg, image/jpeg, image/png" value="{{ old('image') }}"> 
+                <p style="color:red; font-weight:bold;">{{ $errors->first("image") }}</p>
                 <br>
                 <button type="sumbit" class="btn btn-info">登録する</button>
         </form>
