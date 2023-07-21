@@ -39,7 +39,7 @@ class ItemController extends Controller
         //  新しい料理の情報を登録する関数
 
         $this->validate($request, [
-            'title' => 'required|unique|max:20',
+            'title' => 'required|max:20',
             'genre' => 'required|max:20',
             'time' => 'required|max:20',
             'introduction' => 'required|max:200',
