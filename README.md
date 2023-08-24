@@ -1,64 +1,63 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# 献立管理システム
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 概要
+・日々の夕食調理をスムーズに行うため、夕食メニューの管理をおこなうことができるシステム			
+・作れる、作りたい料理の管理・献立一覧の作成ができる
 
-## About Laravel
+## サービスの解決する課題、提供する価値
+・料理と献立の管理をスムーズに行うことで日々の家事の短縮と効率化を目指す!
+・自分が作った料理を画面とデータでストックすることができるので、献立の幅を広げることができる
+・画面上で	献立を管理する事や、料理の作り方サイトにすぐ移動したりすることができるのが便利
+・料理の詳細を画像、文章で保存・編集することができるので視覚的にもイメージしやすくなる
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 機能の内容
+【ログイン画面】				
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+・ID、名前、ニックネーム、メールアドレス、パスワード、管理者か一般のユーザーを登録する・ログイン画面で、それぞれのデータベースにアクセスできるようにする
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+【ホーム画面（献立一覧画面）】
 
-## Learning Laravel
+・ユーザーが登録した商品（料理）が献立一覧として表示される						
+・料理予定の日付を選択してボタンを押すと、昇順に並び替えを自動で行う
+・一般ユーザーはは商品（料理）一覧画面・商品（料理）登録画面・商品（料理）編集画面へ遷移できる
+・管理者ユーザーは上記内容に加え料理削除画面・アカウント管理画面へ遷移できる			
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+【商品一覧】	
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+・登録されている商品（料理）が一覧で表示される	
+・商品（料理）の情報（料理名やジャンル）の中から、キーワードによる検索ができる	
+・商品の詳細を確認することができる	
+	
+【商品編集】	
 
-## Laravel Sponsors
+商品一覧画面	
+商品登録画面への遷移ボタン	
+商品編集画面への遷移ボタン
+商品情報の削除（管理者のみ）
+商品の新規登録
+商品情報の編集
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+【アカウント編集】（管理者のみ）
 
-### Premium Partners
+・アカウント一覧画面には、以下の機能がある。
+アカウント編集画面への遷移ボタン
+アカウント情報の削除
+アカウント情報の編集
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## 工夫した点
+・全体的に料理の写真をバック画面にすることでページのイメージを統一させた
+・どのユーザーが登録した料理（商品）であっても、関係無くどのユーザーも自分の献立に組み入れることができる仕様（リレーションテーブルを使用した多対多の関係）
+・商品一覧で「献立へ追加」ボタンを押すと、ホーム画面（献立一覧画面）に自動で反映され、さらに商品一覧画面の表示が変わり、「献立から削除」と表示される仕様にしたことで、どの商品が献立に登録されているかひと目で分かるようにした
+・料理の一覧に作り方のWEBページへリンクで移動できる仕様にした。（すぐにレシピを確認できる）
+・料理をする日付を登録すると自動で昇順に並び替えして表示するようにシステムを組んだ
+・料理一覧画面に検索機能を入れて、料理を探しやすくした
+・料理一覧画面とは他に、写真メインの一覧画面を作成し、料理の写真や詳細がすぐ分かるようなページを実装した
 
-## Contributing
+## サービスの今後の展望について
+・料理一覧画面（写真メイン）のページにも検索機能を実装したかった
+・料理一覧画面（写真メイン）のページからも献立に追加する機能を実装したかった
+・献立一覧画面（ホーム画面）で日付を登録する時に、一つずつしか登録できないので、一気に複数の日付を更新できる機能を実装したかった。
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
